@@ -59,7 +59,7 @@ export const PROJECTS = {
   cloudsky: {
     id: "cloudsky",
     number: "01",
-    eyebrow: "PRODUCT MANAGEMENT INTERNSHIP",
+    eyebrow: "PRODUCT MANAGEMENT INTERN",
     title: "CloudSky",
     question: "What happens when a player runs out of balance mid-game?",
     summary:

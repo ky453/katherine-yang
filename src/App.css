@@ -2084,6 +2084,773 @@ dialog.modal-shell[open]::backdrop {
   font-style: italic;
 }
 
+.cloudsky-case-study {
+  display: grid;
+  gap: 0;
+  margin-top: 10px;
+}
+
+.cloudsky-case-study h2,
+.cloudsky-case-study p {
+  margin-top: 0;
+}
+
+.cloudsky-case-study h2 {
+  margin-bottom: 14px;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 400;
+  line-height: 1.03;
+}
+
+.cloudsky-case-study p,
+.cloudsky-list {
+  max-width: 620px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.cloudsky-intro,
+.cloudsky-split,
+.cloudsky-wide-block,
+.cloudsky-decision-section,
+.cloudsky-outcome {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+}
+
+.cloudsky-intro {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 40px;
+}
+
+.cloudsky-intro h2 {
+  font-size: clamp(32px, 5vw, 58px);
+}
+
+.cloudsky-section-number {
+  display: block;
+  margin-bottom: 12px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.cloudsky-role {
+  display: block;
+  margin-bottom: 18px;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cloudsky-split {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 40px;
+}
+
+.cloudsky-split--mint {
+  margin-inline: -42px;
+  padding-inline: 42px;
+  background: var(--mint);
+  border-top: 0;
+}
+
+.cloudsky-split--lavender {
+  margin-inline: -42px;
+  padding-inline: 42px;
+  background: var(--lavender);
+}
+
+.cloudsky-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.cloudsky-label .hand,
+.cloudsky-block-heading .hand,
+.cloudsky-outcome > .hand {
+  font-size: 19px;
+}
+
+.cloudsky-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.cloudsky-list li + li {
+  margin-top: 12px;
+}
+
+.cloudsky-wide-block {
+  padding-bottom: 48px;
+}
+
+.cloudsky-block-heading {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 40px;
+  margin-bottom: 28px;
+}
+
+.cloudsky-block-heading h2 {
+  max-width: 580px;
+}
+
+.cloudsky-observation-grid,
+.cloudsky-question-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-left: calc(30% + 12px);
+}
+
+.cloudsky-observation-grid p,
+.cloudsky-question-grid > div {
+  margin: 0;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+
+.cloudsky-pullquote {
+  margin: 42px auto 34px;
+  max-width: 680px !important;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(26px, 4vw, 40px) !important;
+  line-height: 1.1 !important;
+  text-align: center;
+}
+
+.cloudsky-artifact-grid,
+.cloudsky-final-assets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 0 0 40px;
+}
+
+.cloudsky-asset {
+  margin: 0;
+}
+
+.cloudsky-asset-frame {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 1px dashed rgba(23, 24, 19, 0.35);
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(23, 24, 19, 0.04),
+    rgba(23, 24, 19, 0.04) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+.cloudsky-asset--wide .cloudsky-asset-frame {
+  min-height: 190px;
+}
+
+.cloudsky-asset-mark {
+  color: var(--muted);
+  font-size: 22px;
+}
+
+.cloudsky-asset-rule {
+  width: 28%;
+  height: 1px;
+  background: var(--line);
+}
+
+.cloudsky-asset figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 9px;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.cloudsky-asset code {
+  color: var(--ink);
+  font-family: inherit;
+  opacity: 0.65;
+}
+
+.cloudsky-question-grid {
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 34px;
+}
+
+.cloudsky-question-grid > div {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 8px;
+}
+
+.cloudsky-question-grid span {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.cloudsky-question-grid p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.cloudsky-lede {
+  margin: -4px 0 28px 30% !important;
+  max-width: 600px !important;
+  font-family: "Instrument Serif", serif;
+  font-size: 25px !important;
+  line-height: 1.25 !important;
+}
+
+.cloudsky-note {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 15px;
+  padding: 12px 16px;
+  background: var(--cream);
+  transform: rotate(-1deg);
+}
+
+.cloudsky-note .hand {
+  color: var(--muted);
+}
+
+.cloudsky-note strong {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.cloudsky-outcome {
+  padding-bottom: 0;
+}
+
+.cloudsky-outcome > h2,
+.cloudsky-outcome > p,
+.cloudsky-outcome > blockquote {
+  margin-left: 30%;
+}
+
+.cloudsky-outcome > h2 {
+  max-width: 590px;
+}
+
+.cloudsky-outcome blockquote {
+  max-width: 580px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  padding-left: 20px;
+  border-left: 3px solid var(--mint-strong);
+  font-family: "Instrument Serif", serif;
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+.cloudsky-final-assets {
+  margin-top: 38px;
+  padding-bottom: 0;
+}
+
+.sidequest-case-study {
+  display: grid;
+  margin-top: 10px;
+}
+
+.sidequest-case-study h2 {
+  margin: 0 0 16px;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(30px, 4.5vw, 52px);
+  font-weight: 400;
+  line-height: 1.02;
+}
+
+.sidequest-case-study p {
+  max-width: 630px;
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.sidequest-opening,
+.sidequest-problem,
+.sidequest-principle,
+.sidequest-questions,
+.sidequest-hierarchy,
+.sidequest-mvp,
+.sidequest-flow,
+.sidequest-process,
+.sidequest-change,
+.sidequest-tradeoffs,
+.sidequest-build,
+.sidequest-outcome {
+  padding: 42px 0;
+  border-top: 1px solid var(--line);
+}
+
+.sidequest-opening {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 44px;
+  padding-top: 28px;
+}
+
+.sidequest-opening-heading h2 {
+  max-width: 600px;
+  font-size: clamp(34px, 5vw, 62px);
+}
+
+.sidequest-opening-copy {
+  padding-top: 26px;
+}
+
+.sidequest-role,
+.sidequest-section-number,
+.sidequest-mvp-list span,
+.sidequest-status-row b {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.sidequest-role {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.sidequest-section-number {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+.sidequest-hand-note {
+  display: inline-block;
+  margin-top: 10px !important;
+  padding: 9px 13px;
+  background: var(--mint);
+  transform: rotate(-2deg);
+}
+
+.sidequest-band,
+.sidequest-band-lavender {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 42px;
+  margin-inline: -42px;
+  padding-inline: 42px;
+}
+
+.sidequest-band {
+  background: var(--mint);
+}
+
+.sidequest-band-lavender {
+  background: var(--lavender);
+}
+
+.sidequest-section-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidequest-section-label .hand,
+.sidequest-flow-heading .hand,
+.sidequest-principle > .hand,
+.sidequest-outcome > .hand {
+  font-size: 19px;
+}
+
+.sidequest-context-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 620px;
+  margin: 26px 0;
+}
+
+.sidequest-context-list span {
+  padding: 8px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 246, 0.4);
+  font-size: 11px;
+}
+
+.sidequest-pullquote {
+  margin: 34px 0 0 !important;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(25px, 3vw, 36px) !important;
+  line-height: 1.1 !important;
+}
+
+.sidequest-principle {
+  position: relative;
+  padding-right: 170px;
+}
+
+.sidequest-principle h2 {
+  max-width: 680px;
+  font-size: clamp(38px, 6vw, 72px);
+}
+
+.sidequest-budget-mark {
+  position: absolute;
+  right: 12px;
+  top: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 116px;
+  padding: 14px;
+  background: var(--lavender);
+  transform: rotate(5deg);
+}
+
+.sidequest-budget-mark strong {
+  margin: 4px 0;
+  font-family: "Instrument Serif", serif;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.sidequest-budget-mark small {
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  text-transform: uppercase;
+}
+
+.sidequest-questions {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 42px;
+}
+
+.sidequest-question-wall {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.sidequest-question-wall p {
+  min-height: 90px;
+  margin: 0;
+  padding: 15px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  font-family: "Patrick Hand", cursive;
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+.sidequest-question-wall p:nth-child(2n) {
+  transform: translateY(12px) rotate(1deg);
+}
+
+.sidequest-question-wall p:nth-child(3n) {
+  background: var(--mint);
+  transform: rotate(-1deg);
+}
+
+.sidequest-hierarchy-list {
+  display: grid;
+  gap: 8px;
+  margin: 26px 0;
+}
+
+.sidequest-hierarchy-list div {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sidequest-hierarchy-list span {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.sidequest-hierarchy-list strong {
+  font-family: "Instrument Serif", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.sidequest-caveat {
+  color: var(--muted);
+}
+
+.sidequest-mvp-list {
+  display: grid;
+  gap: 0;
+  margin: 28px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidequest-mvp-list li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.sidequest-mvp-list strong {
+  font-family: "Instrument Serif", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.sidequest-later {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px dashed var(--line);
+}
+
+.sidequest-later p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.sidequest-flow-heading {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 42px;
+}
+
+.sidequest-flow-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 620px;
+  margin: 30px auto 34px;
+}
+
+.sidequest-flow-map span {
+  width: min(100%, 410px);
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  text-align: center;
+  font-size: 13px;
+}
+
+.sidequest-flow-map span:nth-of-type(2),
+.sidequest-flow-map span:nth-of-type(4) {
+  background: var(--lavender);
+  transform: translateX(22px);
+}
+
+.sidequest-flow-map i {
+  font-family: "Patrick Hand", cursive;
+  font-size: 22px;
+  font-style: normal;
+}
+
+.sidequest-process-list {
+  display: grid;
+  gap: 0;
+}
+
+.sidequest-process-list div {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.sidequest-process-list strong {
+  font-family: "Instrument Serif", serif;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.sidequest-process-list span {
+  font-size: 13px;
+}
+
+.sidequest-process-list em {
+  padding: 5px 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.sidequest-assets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding: 42px 0;
+}
+
+.sidequest-asset {
+  margin: 0;
+}
+
+.sidequest-asset-frame {
+  min-height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed rgba(23, 24, 19, 0.38);
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(23, 24, 19, 0.04),
+    rgba(23, 24, 19, 0.04) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.sidequest-asset-grid {
+  position: absolute;
+  inset: 20%;
+  border: 1px solid var(--line);
+  background: linear-gradient(90deg, transparent 49%, var(--line) 50%, transparent 51%), linear-gradient(transparent 49%, var(--line) 50%, transparent 51%);
+  opacity: 0.6;
+}
+
+.sidequest-asset-label {
+  position: relative;
+  z-index: 1;
+  padding: 6px 10px;
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.sidequest-asset-wide {
+  margin-top: 28px;
+}
+
+.sidequest-asset-wide .sidequest-asset-frame {
+  min-height: 190px;
+}
+
+.sidequest-asset figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 9px;
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.sidequest-asset code {
+  font-family: inherit;
+  color: var(--ink);
+  opacity: 0.65;
+}
+
+.sidequest-change h2 {
+  max-width: 570px;
+}
+
+.sidequest-tradeoff-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.sidequest-tradeoff-grid div {
+  padding: 17px;
+  border: 1px solid var(--line);
+  background: var(--cream);
+}
+
+.sidequest-tradeoff-grid h3 {
+  margin: 0 0 10px;
+  font-family: "Instrument Serif", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.sidequest-tradeoff-grid h3 i {
+  color: var(--muted);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.sidequest-tradeoff-grid p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.sidequest-status-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin: 26px 0;
+}
+
+.sidequest-status-row span {
+  padding: 11px;
+  border: 1px solid var(--line);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.sidequest-status-row b {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.sidequest-outcome > h2,
+.sidequest-outcome > p,
+.sidequest-outcome > blockquote {
+  margin-left: 30%;
+}
+
+.sidequest-outcome > h2 {
+  max-width: 570px;
+  margin-top: 8px;
+}
+
+.sidequest-outcome blockquote {
+  max-width: 580px;
+  margin-top: 30px;
+  margin-bottom: 24px;
+  padding-left: 20px;
+  border-left: 3px solid var(--mint-strong);
+  font-family: "Instrument Serif", serif;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
 /* project navigation, top (compact) + bottom */
 
 .project-nav {
@@ -2155,6 +2922,110 @@ dialog.modal-shell[open]::backdrop {
 
   .project-modal-question {
     font-size: 18px;
+  }
+
+  .cloudsky-intro,
+  .cloudsky-split,
+  .cloudsky-block-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .cloudsky-intro,
+  .cloudsky-split,
+  .cloudsky-wide-block,
+  .cloudsky-decision-section,
+  .cloudsky-outcome {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .cloudsky-split--mint,
+  .cloudsky-split--lavender {
+    margin-inline: -20px;
+    padding-inline: 20px;
+  }
+
+  .cloudsky-observation-grid,
+  .cloudsky-question-grid,
+  .cloudsky-outcome > h2,
+  .cloudsky-outcome > p,
+  .cloudsky-outcome > blockquote,
+  .cloudsky-lede {
+    margin-left: 0 !important;
+  }
+
+  .cloudsky-observation-grid,
+  .cloudsky-question-grid,
+  .cloudsky-artifact-grid,
+  .cloudsky-final-assets {
+    grid-template-columns: 1fr;
+  }
+
+  .cloudsky-asset--wide .cloudsky-asset-frame,
+  .cloudsky-asset-frame {
+    min-height: 135px;
+  }
+
+  .sidequest-opening,
+  .sidequest-band,
+  .sidequest-band-lavender,
+  .sidequest-questions,
+  .sidequest-flow-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .sidequest-band,
+  .sidequest-band-lavender {
+    margin-inline: -20px;
+    padding-inline: 20px;
+  }
+
+  .sidequest-opening-copy {
+    padding-top: 0;
+  }
+
+  .sidequest-principle {
+    padding-right: 0;
+  }
+
+  .sidequest-budget-mark {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 24px 0 0 auto;
+  }
+
+  .sidequest-question-wall,
+  .sidequest-assets-grid,
+  .sidequest-tradeoff-grid,
+  .sidequest-status-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sidequest-question-wall p:nth-child(2n),
+  .sidequest-question-wall p:nth-child(3n) {
+    transform: none;
+  }
+
+  .sidequest-process-list div {
+    grid-template-columns: 1fr auto;
+  }
+
+  .sidequest-process-list span {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .sidequest-outcome > h2,
+  .sidequest-outcome > p,
+  .sidequest-outcome > blockquote {
+    margin-left: 0;
+  }
+
+  .sidequest-outcome blockquote {
+    font-size: 24px;
   }
 
   .project-nav {

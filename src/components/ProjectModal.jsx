@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import ModalShell from "./ModalShell";
 import ProjectNavigation from "./ProjectNavigation";
 import { ProjectArt } from "./ProjectArt";
+import CloudSkyCaseStudy from "./CloudSkyCaseStudy";
+import SidequestCaseStudy from "./SidequestCaseStudy";
 import { PROJECTS, PROJECT_ORDER } from "../data/projects";
 
 /**
@@ -103,14 +105,20 @@ export default function ProjectModal({ open, activeId, onClose, onNavigate, rest
             ))}
           </div>
 
-          {project.sections.map((section) => (
-            <section className="project-modal-section" key={section.heading}>
-              <h2>{section.heading}</h2>
-              <p className={section.placeholder ? "project-modal-placeholder" : undefined}>
-                {section.body}
-              </p>
-            </section>
-          ))}
+          {project.id === "cloudsky" ? (
+            <CloudSkyCaseStudy />
+          ) : project.id === "sidequest" ? (
+            <SidequestCaseStudy />
+          ) : (
+            project.sections.map((section) => (
+              <section className="project-modal-section" key={section.heading}>
+                <h2>{section.heading}</h2>
+                <p className={section.placeholder ? "project-modal-placeholder" : undefined}>
+                  {section.body}
+                </p>
+              </section>
+            ))
+          )}
 
           <ProjectNavigation
             prevTitle={prevProject.title}
