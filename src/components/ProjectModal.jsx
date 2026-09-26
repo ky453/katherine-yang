@@ -4,6 +4,7 @@ import ProjectNavigation from "./ProjectNavigation";
 import { ProjectArt } from "./ProjectArt";
 import CloudSkyCaseStudy from "./CloudSkyCaseStudy";
 import SidequestCaseStudy from "./SidequestCaseStudy";
+import HonorCaseStudy from "./HonorCaseStudy";
 import { PROJECTS, PROJECT_ORDER } from "../data/projects";
 
 /**
@@ -88,9 +89,11 @@ export default function ProjectModal({ open, activeId, onClose, onNavigate, rest
           >
             {project.title}
           </h1>
-          <p className="project-modal-eyebrow">{project.eyebrow}</p>
+          <p className="project-modal-eyebrow">
+            {project.id === "honor" ? "UX / Motion Design Intern · Shenzhen" : project.eyebrow}
+          </p>
           <p id={descId} className="project-modal-question hand">
-            {project.question}
+            {project.id === "honor" ? "When does motion actually help?" : project.question}
           </p>
         </header>
 
@@ -109,6 +112,8 @@ export default function ProjectModal({ open, activeId, onClose, onNavigate, rest
             <CloudSkyCaseStudy />
           ) : project.id === "sidequest" ? (
             <SidequestCaseStudy />
+          ) : project.id === "honor" ? (
+            <HonorCaseStudy />
           ) : (
             project.sections.map((section) => (
               <section className="project-modal-section" key={section.heading}>
