@@ -61,15 +61,15 @@ export const PROJECTS = {
     number: "01",
     eyebrow: "PRODUCT MANAGEMENT INTERN",
     title: "CloudSky",
-    question: "What happens when a player runs out of balance mid-game?",
+    question: "How should a cloud PC product behave across devices and edge cases?",
     summary:
-      "I owned a slice of the billing experience for a cloud gaming product — the part that shows up exactly when someone's having fun and the money runs out. Getting that moment right meant sitting between user trust, revenue, and engineering constraints, and deciding what actually deserved to be fixed first.",
-    tags: ["Product strategy", "UX", "Monetization", "Cross-functional"],
+      "I worked through product requirements and user guidance for a cloud PC service, covering cross-platform payment, local-to-cloud workflows, session controls, and the edge states that make those experiences predictable.",
+    tags: ["Product requirements", "Cross-platform UX", "Payments", "Cloud PC"],
     art: "cloudsky",
     sections: buildSections({
       overview:
-        "I owned a slice of the billing experience for a cloud gaming product — the part that shows up exactly when someone's having fun and the money runs out. Getting that moment right meant sitting between user trust, revenue, and engineering constraints, and deciding what actually deserved to be fixed first.",
-      question: "What happens when a player runs out of balance mid-game?",
+        "I worked through product requirements and user guidance for a cloud PC service, covering cross-platform payment, local-to-cloud workflows, session controls, and the edge states that make those experiences predictable.",
+      question: "How should a cloud PC product behave across devices and edge cases?",
     }),
   },
   sidequest: {

@@ -364,15 +364,26 @@ function App() {
           Product / Design / Code
         </div>
 
-        <div className="hero-title">
-          <span className="kicker">Katherine Yang</span>
-          <h1>
-            Product manager,
-            <br />
-            <em>designer when needed,</em>
-            <br />
-            builder when useful.
-          </h1>
+        <div className="hero-opening">
+          <div className="hero-title">
+            <span className="kicker">Katherine Yang</span>
+            <h1>
+              Product manager,
+              <br />
+              <em>designer when needed,</em>
+              <br />
+              builder when useful.
+            </h1>
+          </div>
+
+          <figure className="hero-portrait">
+            <img
+              src="/assets/photos/me/head-shot.jpg"
+              alt="Katherine Yang, portrait"
+              fetchPriority="high"
+            />
+            <figcaption className="hand">Katherine Yang · Ithaca, NY</figcaption>
+          </figure>
         </div>
 
         <div className="hero-grid">

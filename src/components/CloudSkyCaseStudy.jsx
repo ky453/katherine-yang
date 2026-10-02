@@ -1,49 +1,35 @@
-function AssetPlaceholder({ label, path, className = "" }) {
-  return (
-    <figure className={`cloudsky-asset ${className}`}>
-      <div className="cloudsky-asset-frame" aria-hidden="true">
-        <span className="cloudsky-asset-mark hand">{label}</span>
-        <span className="cloudsky-asset-rule" />
-      </div>
-      <figcaption>
-        <span>future material</span>
-        <code>{path}</code>
-      </figcaption>
-    </figure>
-  );
-}
-
 function CloudSkyCaseStudy() {
   return (
     <div className="cloudsky-case-study">
       <section className="cloudsky-intro">
         <div>
-          <span className="cloudsky-section-number">01 / 07</span>
+          <span className="cloudsky-section-number">01 / 06</span>
           <span className="cloudsky-role">Product Management Intern</span>
-          <h2>Keeping the player in the game</h2>
+          <h2>Making cloud PC flows work across devices.</h2>
         </div>
         <p>
-          CloudSky is a cloud-gaming product where players manage playtime, balances,
-          queues, sessions, and payment while trying to stay immersed in the game.
+          CloudSky gives people a remote Windows computer for games and demanding
+          applications. My work focused on making the product behavior clearer across
+          PC, Mac, Android, and web touchpoints, from payment and remote-session
+          controls to setup guidance.
         </p>
       </section>
 
       <section className="cloudsky-split cloudsky-split--mint">
         <div className="cloudsky-label">
           <span className="cloudsky-section-number">02</span>
-          <span className="hand">the problem</span>
+          <span className="hand">the product question</span>
         </div>
         <div>
-          <h2>A payment flow can look simple when everything goes right.</h2>
+          <h2>One cloud computer, several very different contexts.</h2>
           <p>
-            The more interesting product problem was what happened at the edges: low
-            balance, expired time cards, switching payment methods, inaccurate
-            remaining-time displays, or waiting in a queue longer than expected.
+            A customer might discover a configuration on a phone, pay on a desktop,
+            and then use a remote Windows session from another device. Small differences
+            in platform behavior can change what a user expects next.
           </p>
           <p>
-            As a Product Management Intern, I worked on improving parts of that
-            experience, especially the moments where system logic became visible to the
-            user.
+            I translated those moments into explicit flows, rules, and exception states
+            that could be reviewed across product and engineering.
           </p>
         </div>
       </section>
@@ -52,120 +38,105 @@ function CloudSkyCaseStudy() {
         <div className="cloudsky-block-heading">
           <span className="cloudsky-section-number">03</span>
           <div>
-            <span className="hand">what I noticed</span>
-            <h2>When expectation and system behavior drift apart</h2>
+            <span className="hand">workstreams</span>
+            <h2>Designing the rules around the happy path.</h2>
           </div>
         </div>
-        <div className="cloudsky-observation-grid">
-          <p>Remaining playtime could look incorrect even when backend deduction was working correctly.</p>
-          <p>Automatic payment-method switching could fail when a time card expired.</p>
-          <p>Queue estimates did not always match the actual waiting experience.</p>
+        <div className="cloudsky-workstream-grid">
+          <article>
+            <span>01 · PAYMENTS</span>
+            <h3>Alipay across PC, Mac, and Android</h3>
+            <p>
+              Defined desktop QR payment and Android app handoff, alongside WeChat,
+              across paid products such as credits, time cards, storage, and bundles.
+            </p>
+          </article>
+          <article>
+            <span>02 · REMOTE WORKFLOW</span>
+            <h3>Clipboard between local and cloud</h3>
+            <p>
+              Specified two-way text, image, and file transfer across PC, Mac, Android,
+              and H5 while preserving familiar copy-and-paste behavior.
+            </p>
+          </article>
+          <article>
+            <span>03 · ANDROID CONTROLS</span>
+            <h3>Preventing accidental zoom</h3>
+            <p>
+              Set fixed display as the default, with an explicit free-zoom option in
+              settings that takes effect immediately and is remembered.
+            </p>
+          </article>
         </div>
-        <p className="cloudsky-pullquote">
-          "How should the product behave when the system reaches an edge case?"
-        </p>
-        <AssetPlaceholder
-          label="journey map"
-          path="/assets/cloudsky/journey-map.png"
-          className="cloudsky-asset--wide"
-        />
       </section>
 
       <section className="cloudsky-split">
         <div className="cloudsky-label">
           <span className="cloudsky-section-number">04</span>
-          <span className="hand">what I worked on</span>
+          <span className="hand">making edge states explicit</span>
         </div>
         <div>
-          <h2>Making the invisible rules discussable</h2>
+          <h2>A useful spec says what happens when things do not go to plan.</h2>
           <ul className="cloudsky-list">
-            <li>Mapped the customer journey across payment, balance, queue, session, and storage flows.</li>
-            <li>Clarified expected product behavior, business rules, edge cases, and operational dependencies.</li>
-            <li>Thought through time-card payment behavior, low-balance reminders, and automatic payment-method switching.</li>
-            <li>Synthesized recurring user friction into product documentation and supported feature rollouts and user guidance.</li>
+            <li>For payment: distinguish success, failure, cancellation, pending confirmation, and an expired QR code; prevent duplicate payment or fulfillment.</li>
+            <li>For clipboard: sync only the latest user-copied item, stop on disconnect, avoid restoring old content, and fail file transfers without leaving partial files.</li>
+            <li>For age checks: calculate whether someone has reached 18 from the full birth date, not birth year alone; do not complete verification for an underage user.</li>
+            <li>For payment operations: define order fields, payment-method filtering, and original-route refunds where the product supports refunds.</li>
           </ul>
         </div>
-      </section>
-
-      <section className="cloudsky-artifact-grid">
-        <AssetPlaceholder label="billing flow" path="/assets/cloudsky/billing-flow.png" />
-        <AssetPlaceholder label="edge-case notes" path="/assets/cloudsky/edge-case-notes.png" />
       </section>
 
       <section className="cloudsky-decision-section">
         <div className="cloudsky-block-heading">
           <span className="cloudsky-section-number">05</span>
           <div>
-            <span className="hand">product decisions</span>
-            <h2>Continuity is the real payment experience</h2>
+            <span className="hand">make the behavior legible</span>
+            <h2>Clear feedback, predictable recovery, fewer surprises.</h2>
           </div>
         </div>
         <p className="cloudsky-lede">
-          A good payment experience is not only about completing a transaction. It is
-          also about preserving continuity.
+          I tried to make the system’s state visible at the exact moment a person needs
+          to decide what to do next.
         </p>
         <div className="cloudsky-question-grid">
-          <div><span>01</span><p>When should we warn someone that their balance is low?</p></div>
-          <div><span>02</span><p>What should happen before a time card expires?</p></div>
-          <div><span>03</span><p>If another payment method is available, when should the product switch automatically?</p></div>
-          <div><span>04</span><p>What does the user need to understand, and what should the system simply handle?</p></div>
+          <div><span>01</span><p>While payment is being confirmed, tell the user and prevent another submission.</p></div>
+          <div><span>02</span><p>If payment is canceled or fails, explain that nothing was issued and offer a retry.</p></div>
+          <div><span>03</span><p>If a file transfer breaks, report the failure without leaving a partial file behind.</p></div>
+          <div><span>04</span><p>Keep age eligibility precise without exposing a rejected identity as verified.</p></div>
         </div>
-        <AssetPlaceholder
-          label="low-balance reminder / payment switching"
-          path="/assets/cloudsky/payment-switching-flow.png"
-          className="cloudsky-asset--wide"
-        />
       </section>
 
       <section className="cloudsky-split cloudsky-split--lavender">
         <div className="cloudsky-label">
           <span className="cloudsky-section-number">06</span>
-          <span className="hand">how I worked</span>
+          <span className="hand">documentation + reflection</span>
         </div>
         <div>
-          <h2>Between product logic and implementation</h2>
+          <h2>Turn product logic into something people can use.</h2>
           <p>
-            I translated user-facing problems into clearer expected behaviors,
-            requirements, edge cases, and documentation that could be discussed across
-            product and engineering.
+            Alongside feature requirements, I drafted a user guide covering the
+            product from sign-in and configuration selection through connection,
+            session controls, and ending a cloud PC session.
           </p>
           <p>
-            I also conducted competitor analysis across UX, pricing, support,
-            community, promotions, and customer journeys.
+            Writing both requirements and user-facing guidance helped me see the same
+            product from two directions: what the system must do, and what a person
+            needs to understand to move forward.
           </p>
-          <div className="cloudsky-note">
-            <span className="hand">artifact trail</span>
-            <strong>requirements / edge cases / competitor analysis</strong>
-          </div>
         </div>
       </section>
 
       <section className="cloudsky-outcome">
-        <span className="cloudsky-section-number">07</span>
-        <span className="hand">outcome + reflection</span>
-        <h2>Clearer rules for common moments and edge cases.</h2>
-        <p>
-          The outcome was a clearer and more consistent way to think through product
-          logic across payment, balance, queue, and session scenarios. This was about
-          making behaviors explicit and discussable, not claiming a quantitative
-          business result.
-        </p>
+        <span className="hand">what I took from the work</span>
+        <h2>Good product work includes the moment after “something went wrong.”</h2>
         <blockquote>
-          Before this internship, I often thought about product problems through the
-          interface first. CloudSky made me think much more about the system underneath
-          it.
+          A clear interface depends on clear rules underneath it: what the system knows,
+          what it should do next, and what it owes the user in the meantime.
         </blockquote>
         <p>
-          A confusing screen might actually be a business-rule problem. A failed
-          interaction might come from an edge case nobody defined. A better experience
-          sometimes means changing what the system does, not what the button looks like.
-          That shift is one of the reasons I became more interested in product
-          management.
+          These documents capture the product decisions and expected behaviors I worked
+          through. They do not imply a launch or a measured business result.
         </p>
-        <div className="cloudsky-final-assets">
-          <AssetPlaceholder label="queue / session screens" path="/assets/cloudsky/queue-session-screens.png" />
-          <AssetPlaceholder label="competitor analysis" path="/assets/cloudsky/competitor-analysis.png" />
-        </div>
       </section>
     </div>
   );
