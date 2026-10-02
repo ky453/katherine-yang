@@ -6,8 +6,8 @@ import { PROJECT_ORDER, projectList } from "./data/projects";
 
 /* ───────────────────────────────────────────────────────
    EDITABLE CONTENT
-   Everything below is data. Update copy, links, and
-   placeholders here without touching the components
+  Everything below is data. Update copy, links, and
+  placeholders here without touching the components
    further down the file. Project content itself lives in
    src/data/projects.js.
    ─────────────────────────────────────────────────────── */
@@ -22,63 +22,54 @@ const CURRENTLY_ITEMS = [
   { label: "saving", text: "menus, packaging, interesting interfaces, typography, signs" },
 ];
 
-const PLAYGROUND_ITEMS = [
+const PLAYGROUND_PHOTOS = [
   {
-    id: "photo-01",
-    type: "photo",
-    path: "/assets/playground/photo-01.jpg",
-    caption: "swap for a real photo",
+    id: "barcelona",
+    path: "/assets/photos/travel/spain-barcelona.jpg",
+    caption: "A day among the mosaics in Barcelona.",
+    alt: "Katherine in front of colorful mosaic architecture in Barcelona",
+    layout: "wide",
   },
   {
-    id: "note-01",
-    type: "note",
-    title: "things I keep taking pictures of",
-    body: "signs / menus / windows / shadows",
+    id: "mapo-tofu",
+    path: "/assets/photos/food/mapo-tofu.jpg",
+    caption: "Dinner, with flowers on the table.",
+    alt: "Homemade mapo tofu and side dishes on a table with pink flowers",
+    layout: "food",
   },
   {
-    id: "code-01",
-    type: "code",
-    title: "easing, felt",
+    id: "lookout",
+    path: "/assets/photos/travel/spain-tibidabo.jpg",
+    caption: "At a lookout, with mountains all around.",
+    alt: "Katherine in a red dress beside a carved stone figure above a green valley",
+    layout: "portrait",
   },
   {
-    id: "motion-01",
-    type: "motion",
-    title: "a small motion study",
+    id: "sendoff",
+    path: "/assets/photos/mcsa/mcsa-shanghai-sendoff.jpg",
+    caption: "A little Cornell in Shanghai.",
+    alt: "Katherine with fellow Cornell students at a Shanghai send-off gathering",
+    layout: "group",
   },
   {
-    id: "travel-01",
-    type: "travel",
-    place: "[place]",
-    note: "[what you noticed there]",
+    id: "peach-burrata",
+    path: "/assets/photos/food/peach-burrata-salad.jpg",
+    caption: "Peaches, burrata, and a very good plate.",
+    alt: "Peach and burrata salad with greens on a dark serving plate",
+    layout: "food-wide",
   },
   {
-    id: "save-01",
-    type: "save",
-    title: "things I save",
-    items: [
-      "a menu with too much personality",
-      "a sign that over-explains itself",
-      "a button that feels too good to click",
-    ],
+    id: "japan",
+    path: "/assets/photos/travel/japan-1.jpg",
+    caption: "A quiet moment in Japan.",
+    alt: "Katherine in a patterned blue kimono outside a traditional wooden building",
+    layout: "portrait-small",
   },
 ];
 
 const ABOUT_FACTS = [
   { label: "based in", value: "Ithaca, NY" },
-  { label: "grew up in", value: "[add: hometown]" },
   { label: "studying", value: "Information Science + History of Art, Cornell" },
-];
-
-const ABOUT_CARE_ABOUT = [
-  "[add: a thing you care about]",
-  "[add: a thing you care about]",
-  "[add: a thing you care about]",
-];
-
-const ABOUT_ENJOY = [
-  "[add: something you do outside school/work]",
-  "[add: something you do outside school/work]",
-  "[add: something you do outside school/work]",
 ];
 
 const EXPERIENCE = [
@@ -105,16 +96,13 @@ const SKILLS = [
    SMALL SHARED COMPONENTS
    ─────────────────────────────────────────────────────── */
 
-function PhotoPlaceholder({ path, caption, className = "" }) {
+function PhotoFigure({ path, caption, alt, className = "", loading = "lazy" }) {
   return (
-    <figure className={`photo-placeholder ${className}`}>
-      <div className="photo-placeholder-box" aria-hidden="true">
-        <span className="hand">photo</span>
+    <figure className={`photo-figure ${className}`}>
+      <div className="photo-frame">
+        <img src={path} alt={alt} loading={loading} />
       </div>
-      <figcaption>
-        {caption}
-        <code>{path}</code>
-      </figcaption>
+      <figcaption className="hand">{caption}</figcaption>
     </figure>
   );
 }
@@ -244,72 +232,6 @@ function MotionStudy() {
       <span className="motion-demo-label hand">hover to settle</span>
     </div>
   );
-}
-
-function PlaygroundItem({ item, index }) {
-  const rotation = `scrap-rot-${(index % 4) + 1}`;
-
-  if (item.type === "photo") {
-    return (
-      <div className={`scrap scrap--photo ${rotation}`}>
-        <PhotoPlaceholder path={item.path} caption={item.caption} />
-      </div>
-    );
-  }
-
-  if (item.type === "note") {
-    return (
-      <div className={`scrap scrap--note ${rotation}`}>
-        <span className="hand scrap-title">{item.title}</span>
-        <p className="scrap-body">{item.body}</p>
-      </div>
-    );
-  }
-
-  if (item.type === "code") {
-    return (
-      <div className={`scrap scrap--code ${rotation}`}>
-        <span className="scrap-label">CODE EXPERIMENT</span>
-        <span className="hand scrap-title">{item.title}</span>
-        <EasingExperiment />
-      </div>
-    );
-  }
-
-  if (item.type === "motion") {
-    return (
-      <div className={`scrap scrap--motion ${rotation}`}>
-        <span className="scrap-label">MOTION EXPERIMENT</span>
-        <span className="hand scrap-title">{item.title}</span>
-        <MotionStudy />
-      </div>
-    );
-  }
-
-  if (item.type === "travel") {
-    return (
-      <div className={`scrap scrap--travel ${rotation}`}>
-        <span className="scrap-label">TRAVEL / PLACES</span>
-        <strong className="scrap-place">{item.place}</strong>
-        <p className="scrap-body">{item.note}</p>
-      </div>
-    );
-  }
-
-  if (item.type === "save") {
-    return (
-      <div className={`scrap scrap--save ${rotation}`}>
-        <span className="hand scrap-title">{item.title}</span>
-        <ul className="scrap-save-list">
-          {item.items.map((entry) => (
-            <li key={entry}>{entry}</li>
-          ))}
-        </ul>
-      </div>
-    );
-  }
-
-  return null;
 }
 
 /* ───────────────────────────────────────────────────────
@@ -544,23 +466,43 @@ function App() {
       <section className="playground" id="playground">
         <div className="section-intro">
           <span className="section-no">+</span>
-          <p>MY CREATIVE SPACE</p>
-          <span className="section-side">one drawer of my desk</span>
+          <p>CAMERA ROLL, LOOSELY EDITED</p>
+          <span className="section-side">things I noticed</span>
         </div>
 
         <div className="playground-copy">
           <h2>A little less résumé. A little more me.</h2>
           <p>
-            I like photography, visual culture, motion, small coded
-            experiments, and collecting details that make interfaces feel
-            human. This is where they live before they become anything else.
+            Places, plates, people, and the visual details I keep bringing home.
+            Not quite a travel diary, not quite a portfolio; just a few things
+            I wanted to remember.
           </p>
         </div>
 
-        <div className="scrap-board" aria-label="Creative interests">
-          {PLAYGROUND_ITEMS.map((item, index) => (
-            <PlaygroundItem item={item} index={index} key={item.id} />
+        <div className="photo-notebook" aria-label="Selected personal photographs">
+          {PLAYGROUND_PHOTOS.map((photo) => (
+            <PhotoFigure
+              key={photo.id}
+              path={photo.path}
+              caption={photo.caption}
+              alt={photo.alt}
+              className={`notebook-photo notebook-photo--${photo.layout}`}
+            />
           ))}
+        </div>
+
+        <div className="playground-experiments" aria-label="Small interaction experiments">
+          <div className="scrap scrap--code">
+            <span className="scrap-label">CODE EXPERIMENT</span>
+            <span className="hand scrap-title">easing, felt</span>
+            <EasingExperiment />
+          </div>
+          <div className="scrap scrap--motion">
+            <span className="scrap-label">MOTION EXPERIMENT</span>
+            <span className="hand scrap-title">a small motion study</span>
+            <MotionStudy />
+          </div>
+          <span className="hand playground-margin-note">still collecting little things ↗</span>
         </div>
       </section>
 
@@ -575,7 +517,7 @@ function App() {
           <p className="hand">a strange combination that makes a lot of sense</p>
 
           <ul className="about-facts">
-            {ABOUT_FACTS.map((fact) => (
+            {ABOUT_FACTS.filter((fact) => !fact.value.startsWith("[")).map((fact) => (
               <li key={fact.label}>
                 <span className="hand">{fact.label}</span> {fact.value}
               </li>
@@ -593,42 +535,16 @@ function App() {
             fuzzy and the team has to figure out what matters before deciding
             what to build.
           </p>
-
-          <div className="about-lists">
-            <div className="about-list">
-              <span className="hand">things I care about</span>
-              <ul>
-                {ABOUT_CARE_ABOUT.map((line) => (
-                  <li key={line}>{line}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="about-list">
-              <span className="hand">outside school &amp; work</span>
-              <ul>
-                {ABOUT_ENJOY.map((line) => (
-                  <li key={line}>{line}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="about-photos">
-            <PhotoPlaceholder
-              path="/assets/about/photo-01.jpg"
-              caption="a real photo of you"
-              className="about-photo-a"
-            />
-            <PhotoPlaceholder
-              path="/assets/about/photo-02.jpg"
-              caption="a place, a moment, a detail"
-              className="about-photo-b"
-            />
-          </div>
-
-          <ExperienceSkills />
+          <PhotoFigure
+            path="/assets/photos/travel/italy-florence-2.jpg"
+            alt="Katherine standing in front of Florence Cathedral"
+            caption="Florence, looking up as usual."
+            className="about-photo-feature"
+            loading="eager"
+          />
         </div>
+
+        <ExperienceSkills />
       </section>
 
       <footer>
