@@ -1,7 +1,6 @@
 /* ───────────────────────────────────────────────────────
    PROJECT DATA
-   Single source of truth for both the homepage preview
-   cards and the modal case-study views.
+   Single source of truth for Home, Work, and project pages.
 
    To add a fourth project later:
    1. Add its id to PROJECT_ORDER (controls sequence + count).
@@ -12,9 +11,14 @@
       components/ProjectArt.jsx (there's a generic
       placeholder scene for any art key it doesn't recognize,
       so nothing breaks if you skip that step at first).
+      Or set `thumbnail` to an existing image in public/.
+   4. For a custom layout, register a case-study component in
+      components/ProjectContent.jsx. Otherwise `sections` render
+      automatically. No route or navigation changes are needed.
    ─────────────────────────────────────────────────────── */
 
 export const PROJECT_ORDER = ["cloudsky", "sidequest", "honor"];
+export const FEATURED_PROJECTS = ["cloudsky", "sidequest"];
 
 const SECTION_PROMPTS = {
   context:

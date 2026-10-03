@@ -1,23 +1,12 @@
-export default function ProjectNavigation({
-  prevTitle,
-  nextTitle,
-  onPrev,
-  onNext,
-  compact = false,
-}) {
+export default function ProjectNavigation({ previous, next }) {
   return (
-    <nav
-      className={`project-nav ${compact ? "project-nav--compact" : ""}`}
-      aria-label="Project"
-    >
-      <button type="button" className="project-nav-btn" onClick={onPrev}>
-        <span aria-hidden="true">←</span>{" "}
-        {compact ? "Prev" : `Previous project — ${prevTitle}`}
-      </button>
-      <button type="button" className="project-nav-btn" onClick={onNext}>
-        {compact ? "Next" : `Next project — ${nextTitle}`}{" "}
-        <span aria-hidden="true">→</span>
-      </button>
+    <nav className="project-nav" aria-label="Project">
+      <a className="project-nav-btn" href={`#/projects/${previous.id}`}>
+        <span aria-hidden="true">←</span> Previous Project — {previous.title}
+      </a>
+      <a className="project-nav-btn" href={`#/projects/${next.id}`}>
+        Next Project — {next.title} <span aria-hidden="true">→</span>
+      </a>
     </nav>
   );
 }

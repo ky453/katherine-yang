@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { assetUrl } from "../lib/assets";
 
 function HonorAsset({ src, label, alt, sequence = false }) {
   const [loaded, setLoaded] = useState(false);
@@ -24,7 +25,7 @@ function HonorAsset({ src, label, alt, sequence = false }) {
           </div>
         )}
         <img
-          src={src}
+          src={assetUrl(src)}
           alt={alt}
           hidden={!loaded}
           onLoad={() => setLoaded(true)}
