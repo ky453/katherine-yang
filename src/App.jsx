@@ -365,7 +365,7 @@ function App() {
         </div>
 
         <div className="hero-opening">
-          <div className="hero-title">
+          <div className="hero-copy">
             <span className="kicker">Katherine Yang</span>
             <h1>
               Product manager,
@@ -374,38 +374,32 @@ function App() {
               <br />
               builder when useful.
             </h1>
+
+            <div className="hero-intro-card">
+              <span className="intro-label">INTRO</span>
+              <p>
+                I'm interested in <mark>people and products</mark>, visual culture,
+                and technology. I like making things to understand them better,
+                especially the <mark>small details</mark> that make a product feel clear,
+                useful, and human.
+              </p>
+            </div>
+
+            <a className="scroll-cue" href="#work">
+              a bit about me, then the work <span>↓</span>
+            </a>
           </div>
 
           <figure className="hero-portrait">
-            <img
-              src="/assets/photos/me/head-shot.jpg"
-              alt="Katherine Yang, portrait"
-              fetchPriority="high"
-            />
-            <figcaption className="hand">Katherine Yang · Ithaca, NY</figcaption>
+            <div className="portrait-image-shell">
+              <img
+                src="/assets/photos/me/head-shot.jpg"
+                alt="Katherine Yang, portrait"
+                fetchPriority="high"
+              />
+            </div>
+            <figcaption className="hand">currently in Ithaca, NY</figcaption>
           </figure>
-        </div>
-
-        <div className="hero-grid">
-          <p className="hero-intro">
-            I'm interested in people, products, visual culture, and technology —
-            and I like making things to understand them better, down to the
-            smallest detail.
-          </p>
-
-          <div className="hero-note">
-            <span className="hand">small detail →</span>
-            <p>will absolutely stop to read a well-designed sign</p>
-          </div>
-
-          <a className="scroll-cue" href="#work">
-            a bit about me, then the work <span>↓</span>
-          </a>
-        </div>
-
-        <div className="hero-mark" aria-hidden="true">
-          <span>K</span>
-          <span>Y</span>
         </div>
       </section>
 
