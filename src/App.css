@@ -49,7 +49,7 @@ a {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--ink);
   font-size: 12px;
   letter-spacing: 0.08em;
 }
@@ -66,7 +66,28 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  align-items: flex-end;
+  align-self: end;
+  gap: 4px;
+}
+
+.nav-links a {
+  display: block;
+  min-height: 44px;
+  padding: 10px 20px 12px;
+  border: 1px solid var(--ink);
+  border-bottom: none;
+  background: var(--cream);
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.nav-links a[aria-current="page"] {
+  background: var(--mint);
+  font-weight: 600;
 }
 
 .nav-links a,
@@ -74,7 +95,6 @@ a {
   position: relative;
 }
 
-.nav-links a::after,
 .resume::after,
 .case-link::after {
   content: "";
@@ -87,7 +107,6 @@ a {
   transition: width 220ms ease;
 }
 
-.nav-links a:hover::after,
 .resume:hover::after,
 .case-link:hover::after {
   width: 100%;
@@ -1367,8 +1386,16 @@ a {
     grid-template-columns: 1fr auto;
   }
 
-  .nav-links {
-    display: none;
+  .topbar .nav-links {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    padding-top: 14px;
+  }
+
+  .topbar .nav-links a {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 4px 12px;
   }
 
   .hero {

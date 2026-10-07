@@ -25,17 +25,6 @@ main h1[tabindex="-1"]:focus {
   letter-spacing: 0;
 }
 
-.topbar .nav-links {
-  display: flex;
-  gap: 24px;
-}
-
-.nav-links a[aria-current="page"]::after {
-  width: 100%;
-  background: var(--mint-strong);
-  height: 2px;
-}
-
 .page-heading,
 .home-section,
 .project-preview-grid,
@@ -376,7 +365,7 @@ main h1[tabindex="-1"]:focus {
 
 @media (max-width: 1000px) {
   .topbar { grid-template-columns: auto 1fr auto; gap: 24px; }
-  .topbar .nav-links { justify-content: center; gap: 18px; }
+  .topbar .nav-links { justify-content: center; }
   .project-preview-grid { gap: 48px 24px; }
   .project-preview-grid--work .project-preview:nth-child(3n) { column-gap: 24px; }
   .page-heading + .about .about-lead h2 { font-size: 52px; }
@@ -388,14 +377,11 @@ main h1[tabindex="-1"]:focus {
     min-height: 108px;
     grid-template-columns: 1fr auto;
     gap: 0 16px;
-    padding: 18px 0 12px;
+    padding: 18px 0 0;
     font-size: 11px;
   }
   .topbar .wordmark { grid-row: 1; grid-column: 1; }
   .topbar .resume { grid-row: 1; grid-column: 2; }
-  .topbar .nav-links { grid-row: 2; grid-column: 1 / -1; justify-content: space-between; gap: 8px; padding-top: 14px; }
-  .topbar .nav-links a { padding: 8px 0; }
-  .nav-links a::after { bottom: 2px; }
   .page-heading, .home-section, .project-preview-grid, .project-page { width: calc(100% - 32px); }
   .page-heading { padding: 40px 0 32px; }
   .page-heading h1 { font-size: 52px; }
