@@ -18,7 +18,7 @@ export default function ProjectPage({ project }) {
         </div>
         <h1 className="project-modal-title">{project.title}</h1>
         <p className="project-modal-eyebrow">
-          {project.id === "honor" ? "UX / Motion Design Intern · Shenzhen" : project.eyebrow}
+          {project.id === "honor" ? "UX and Motion Design Intern · Shenzhen" : project.eyebrow}
         </p>
         <p className="project-modal-question hand">
           {project.id === "honor" ? "When does motion actually help?" : project.question}

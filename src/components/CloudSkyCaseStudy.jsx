@@ -91,7 +91,7 @@ function CloudSkyCaseStudy() {
           <span className="cloudsky-section-number">05</span>
           <div>
             <span className="hand">make the behavior legible</span>
-            <h2>Clear feedback, predictable recovery, fewer surprises.</h2>
+            <h2>Make it clear what happens next.</h2>
           </div>
         </div>
         <p className="cloudsky-lede">
@@ -109,7 +109,7 @@ function CloudSkyCaseStudy() {
       <section className="cloudsky-split cloudsky-split--lavender">
         <div className="cloudsky-label">
           <span className="cloudsky-section-number">06</span>
-          <span className="hand">documentation + reflection</span>
+          <span className="hand">writing from the user's side</span>
         </div>
         <div>
           <h2>Turn product logic into something people can use.</h2>

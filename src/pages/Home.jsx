@@ -8,11 +8,6 @@ export default function Home() {
   return (
     <>
       <section className="hero" id="top">
-        <div className="hero-stamp">
-          <span className="stamp-dot" />
-          Product / Design / Code
-        </div>
-
         <div className="hero-opening">
           <div className="hero-copy">
             <span className="kicker">Katherine Yang</span>
@@ -27,15 +22,14 @@ export default function Home() {
             <div className="hero-intro-card">
               <span className="intro-label">INTRO</span>
               <p>
-                I'm interested in <mark>people and products</mark>, visual culture,
-                and technology. I like making things to understand them better,
-                especially the <mark>small details</mark> that make a product feel clear,
-                useful, and human.
+                I make things to understand <mark>how they work</mark>. I'm curious
+                about what people expect from a product, and the <mark>small details</mark>
+                {" "}that help them find their way.
               </p>
             </div>
 
             <a className="scroll-cue" href="#/work">
-              a bit about me, then the work <span>↓</span>
+              take a look at the work <span>↓</span>
             </a>
           </div>
 
@@ -55,7 +49,7 @@ export default function Home() {
       <Currently />
       <section className="home-section" aria-labelledby="featured-title">
         <div className="preview-section-heading">
-          <h2 id="featured-title">Selected product stories</h2>
+          <h2 id="featured-title">A closer look at my work</h2>
           <a className="case-link" href="#/work">View all work →</a>
         </div>
         <div className="project-preview-grid project-preview-grid--featured">

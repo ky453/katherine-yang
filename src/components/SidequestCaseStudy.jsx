@@ -19,8 +19,8 @@ function SidequestCaseStudy() {
       <section className="sidequest-opening">
         <div className="sidequest-opening-heading">
           <span className="sidequest-section-number">01 / 12</span>
-          <span className="sidequest-role">Product / Design / Build</span>
-          <h2>A discovery and memory product for figuring out what to do, without pretending budget does not matter.</h2>
+          <span className="sidequest-role">A personal project taking shape</span>
+          <h2>Find something to do that fits your budget, then keep the memory.</h2>
         </div>
         <div className="sidequest-opening-copy">
           <p>
@@ -33,7 +33,7 @@ function SidequestCaseStudy() {
             spending. Photos and memories live somewhere else. The experience felt
             fragmented.
           </p>
-          <p className="sidequest-hand-note hand">What if discovery, planning, budget, and memory lived together?</p>
+          <p className="sidequest-hand-note hand">What if finding something to do also helped me remember it?</p>
         </div>
       </section>
 
@@ -112,7 +112,7 @@ function SidequestCaseStudy() {
           <div className="sidequest-hierarchy-list">
             <div><span>CORE</span><strong>Discover something worth doing.</strong></div>
             <div><span>CONTEXT</span><strong>Make it fit the user's situation, including budget.</strong></div>
-            <div><span>CONTINUITY</span><strong>Save, reflect on, and remember what actually happened.</strong></div>
+            <div><span>CONTINUITY</span><strong>Keep a memory of what actually happened.</strong></div>
           </div>
           <p className="sidequest-caveat hand">A working hierarchy, not a claim that the idea is finished.</p>
         </div>
@@ -133,11 +133,11 @@ function SidequestCaseStudy() {
             <li><span>01</span><strong>Activity discovery</strong></li>
             <li><span>02</span><strong>Contextual recommendation inputs</strong></li>
             <li><span>03</span><strong>Budget-aware recommendations</strong></li>
-            <li><span>04</span><strong>Save / plan an activity</strong></li>
+            <li><span>04</span><strong>Save an activity for later</strong></li>
             <li><span>05</span><strong>Lightweight post-activity memory</strong></li>
           </ol>
           <div className="sidequest-later">
-            <span className="hand">later / still exploring</span>
+            <span className="hand">ideas for later</span>
             <p>ratings · richer financial tracking · social features · community events · deeper personalization · recommendation history</p>
           </div>
         </div>
@@ -154,9 +154,9 @@ function SidequestCaseStudy() {
         <div className="sidequest-flow-map">
           <span>I want to do something</span><i>↓</i>
           <span>Tell Sidequest what matters right now</span><i>↓</i>
-          <span>mood / time / budget / context</span><i>↓</i>
+          <span>What fits my mood and the time and money I have?</span><i>↓</i>
           <span>Get relevant activity suggestions</span><i>↓</i>
-          <span>Explore → save / plan → do → remember</span>
+          <span>Choose an activity, then keep the memory</span>
         </div>
         <SidequestAsset label="user flow" path="/assets/sidequest/user-flow.png" className="sidequest-asset-wide" />
       </section>
@@ -230,9 +230,9 @@ function SidequestCaseStudy() {
         <div>
           <h2>Make it buildable, not just presentable.</h2>
           <p>
-            Sidequest connects component thinking, interaction logic, React, and frontend
-            implementation. The component system is not only about visual consistency;
-            it is also about making the product easier to extend and eventually build.
+            I started planning how Sidequest's interactions could become reusable React
+            components. A consistent component system should make the product easier
+            to extend when it is ready to build.
           </p>
           <div className="sidequest-status-row">
             <span><b>designed</b> product direction, UI system</span>
@@ -240,15 +240,15 @@ function SidequestCaseStudy() {
             <span><b>planned</b> reusable implementation patterns</span>
             <span><b>implemented</b> this case-study surface</span>
           </div>
-          <SidequestAsset label="UI kit / component library" path="/assets/sidequest/ui-kit.png" className="sidequest-asset-wide" />
-          <SidequestAsset label="components + recommendation modules" path="/assets/sidequest/component-library.png" className="sidequest-asset-wide" />
+          <SidequestAsset label="Reusable interface pieces" path="/assets/sidequest/ui-kit.png" className="sidequest-asset-wide" />
+          <SidequestAsset label="How recommendations could fit together" path="/assets/sidequest/component-library.png" className="sidequest-asset-wide" />
         </div>
       </section>
 
       <section className="sidequest-outcome">
         <span className="sidequest-section-number">12</span>
-        <span className="hand">where it is now / what I learned</span>
-        <h2>An evolving 0→1 product process.</h2>
+        <span className="hand">what still needs testing</span>
+        <h2>The concept is clearer. It still needs validation.</h2>
         <p>
           The outcome is a clearer product concept, a more coherent feature hierarchy,
           a design system, and a path from sketches toward higher-fidelity and

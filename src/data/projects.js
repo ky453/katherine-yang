@@ -79,17 +79,17 @@ export const PROJECTS = {
   sidequest: {
     id: "sidequest",
     number: "02",
-    eyebrow: "PRODUCT + DESIGN + BUILD",
+    eyebrow: "A PERSONAL PROJECT TAKING SHAPE",
     title: "Sidequest",
     question:
       "Why do activity apps recommend things without knowing what I can actually afford?",
     summary:
-      "A concept I designed and built end to end, where budget is part of the recommendation instead of an asterisk at checkout. 'What can I do tonight' should already know what's in your wallet.",
+      "A concept I'm developing around a simple constraint: recommendations should account for what you can afford, not leave budget until checkout.",
     tags: ["0→1", "Research", "Interaction design", "Frontend"],
     art: "sidequest",
     sections: buildSections({
       overview:
-        "A concept I designed and built end to end, where budget is part of the recommendation instead of an asterisk at checkout. 'What can I do tonight' should already know what's in your wallet.",
+        "A concept I'm developing around a simple constraint: recommendations should account for what you can afford, not leave budget until checkout.",
       question:
         "Why do activity apps recommend things without knowing what I can actually afford?",
     }),
@@ -97,7 +97,7 @@ export const PROJECTS = {
   honor: {
     id: "honor",
     number: "03",
-    eyebrow: "UX / MOTION DESIGN",
+    eyebrow: "MOTION FOR MOBILE INTERFACES",
     title: "HONOR",
     question:
       "When does motion make an interface easier to understand, rather than just prettier?",

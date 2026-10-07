@@ -1,6 +1,6 @@
 export const CURRENTLY_ITEMS = [
-  { label: "learning", text: "React / product analytics" },
-  { label: "making", text: "Sidequest + this website" },
+  { label: "learning", text: "React and product analytics" },
+  { label: "making", text: "Sidequest and this website" },
   {
     label: "thinking about",
     text: "why some tiny interactions make products feel dramatically better",
@@ -96,7 +96,7 @@ export const ABOUT_FACTS = [
 
 export const EXPERIENCE = [
   { org: "CloudSky", role: "Product Management Intern", meta: "2025" },
-  { org: "HONOR", role: "UX / Motion Design Intern", meta: "2025" },
+  { org: "HONOR", role: "UX and Motion Design Intern", meta: "2025" },
 ];
 
 export const SKILLS = [
@@ -114,4 +114,4 @@ export const SKILLS = [
   },
 ];
 
-export const ABOUT_INTRO = "I'm interested in products because they sit between systems and people. My technical background helps me understand what can be built; design helps me see how it should feel; visual studies keeps me asking what choices mean and who they're for. I'm especially drawn to work where the problem is still a little fuzzy and the team has to figure out what matters before deciding what to build.";
+export const ABOUT_INTRO = "I'm interested in what people expect from a product and how the system responds. Studying Information Science alongside History of Art makes me look at both how things work and what their choices communicate. I'm drawn to projects where the problem is still fuzzy and the team needs to figure out what matters before deciding what to build.";

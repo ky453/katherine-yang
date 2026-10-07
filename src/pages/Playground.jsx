@@ -27,7 +27,7 @@ export default function Playground() {
       <header className="playground-board-heading">
         <div>
           <h1>Playground</h1>
-          <p>things I noticed, saved, ate, made, and almost walked past</p>
+          <p>things I noticed and wanted to keep</p>
         </div>
         <div className="playground-board-actions">
           <button type="button" className="playground-surprise" onClick={surpriseMe} aria-haspopup="dialog">

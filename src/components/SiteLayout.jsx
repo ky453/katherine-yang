@@ -53,10 +53,9 @@ export default function SiteLayout({ activePage, children }) {
             </a>
           </div>
 
-          <p>Designed + coded by Katherine Yang · 2026</p>
+          <p>Designed and coded by Katherine Yang · 2026</p>
         </div>
       </footer>
     </div>
   );
 }
-

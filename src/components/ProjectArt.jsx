@@ -16,7 +16,7 @@ export function ProjectArt({ type }) {
             <i />
             <i />
             <i />
-            <span>cloud gaming / billing</span>
+            <span>cloud gaming balance</span>
           </div>
           <div className="mock-heading">Session balance</div>
           <div className="mock-balance">$ 4.20</div>
