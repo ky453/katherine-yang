@@ -3,13 +3,6 @@ import { assetUrl } from "../lib/assets";
 import HeroCarousel from "./HeroCarousel";
 import "./HomeHero.css";
 
-const FACTS = [
-  { id: "cooking", text: "I love cooking & baking", href: "#/playground", motif: "cup" },
-  { id: "travel", text: "travel + visual observations", href: "#/playground", motif: "globe" },
-  { id: "people", text: "curious about what people expect from a product", href: "#/work" },
-  { id: "details", text: "small details that help people find their way", href: "#/work", motif: "lens" },
-];
-
 function useMediaQuery(query) {
   const subscribe = useCallback((listener) => {
     const media = window.matchMedia(query);
@@ -45,7 +38,6 @@ export default function HomeHero() {
       aria-labelledby="home-hero-title" data-motion-paused={motionPaused}>
       <div className="home-landing-stage">
         <div className="home-landing-intro">
-          <p className="home-landing-greeting hand">hi, I&apos;m</p>
           <h1 id="home-hero-title"><span>Katherine</span>{" "}<span>Yang</span></h1>
           <p className="home-landing-statement">
             I make things to understand how they work. I&apos;m curious about
@@ -64,23 +56,14 @@ export default function HomeHero() {
 
         <HeroCarousel paused={motionPaused} staticLayout={reducedMotion || compact} />
 
-        <div className="home-landing-facts">
-          {FACTS.map((fact) => (
-            <div className={`home-landing-fact home-landing-fact--${fact.id}`} key={fact.id}>
-              <a className="home-landing-cloud" href={fact.href}>
-                {fact.motif && <span className={`hero-motif hero-motif--${fact.motif}`} aria-hidden="true" />}
-                <span>{fact.text}</span>
-              </a>
-            </div>
-          ))}
-        </div>
-
-        <button className="home-landing-motion" type="button"
-          aria-label={reducedMotion ? "Motion disabled by system preference" : paused ? "Resume motion" : "Pause motion"}
-          title={reducedMotion ? "Motion disabled by system preference" : paused ? "Resume motion" : "Pause motion"}
-          aria-pressed={paused} disabled={reducedMotion} onClick={() => setPaused(!paused)}>
-          <span className={paused ? "hero-motion-icon hero-motion-icon--play" : "hero-motion-icon"} aria-hidden="true" />
-        </button>
+        {!compact && !reducedMotion && (
+          <button className="home-landing-motion" type="button"
+            aria-label={paused ? "Resume motion" : "Pause motion"}
+            title={paused ? "Resume motion" : "Pause motion"}
+            aria-pressed={paused} onClick={() => setPaused(!paused)}>
+            <span className={paused ? "hero-motion-icon hero-motion-icon--play" : "hero-motion-icon"} aria-hidden="true" />
+          </button>
+        )}
       </div>
     </section>
   );

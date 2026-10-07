@@ -1,3 +1,7 @@
+export const CAROUSEL_PAUSE_MS = 1800;
+export const CAROUSEL_SWIPE_MS = 1320;
+export const CAROUSEL_STEP_MS = CAROUSEL_PAUSE_MS + CAROUSEL_SWIPE_MS;
+
 export function arcSlots(count) {
   if (count < 2) return [{ left: "50%", top: "12%" }];
   return Array.from({ length: count }, (_, index) => {
@@ -11,19 +15,20 @@ export function arcSlots(count) {
 
 export function arcKeyframes(count) {
   const slots = arcSlots(count);
-  const frame = (slot, offset, opacity = 1) => ({
-    ...slot, offset, opacity, pointerEvents: opacity === 0 ? "none" : "auto",
+  const duration = count * CAROUSEL_STEP_MS;
+  const frame = (slot, time, opacity = 1) => ({
+    ...slot, offset: time / duration, opacity, pointerEvents: opacity === 0 ? "none" : "auto",
     easing: "ease-in-out", transform: "translateX(-50%)",
   });
   const frames = slots.flatMap((slot, index) => [
-    frame(slot, index / count),
-    frame(slot, (index + 0.78) / count),
+    frame(slot, index * CAROUSEL_STEP_MS),
+    frame(slot, index * CAROUSEL_STEP_MS + CAROUSEL_PAUSE_MS),
   ]);
-  // Fade before wrapping so a card never sweeps across the portrait.
+  // Preserve the 480ms fade-out, 120ms hidden crossing, and 720ms fade-in.
   frames.push(
-    frame(slots.at(-1), (count - 0.14) / count, 0),
-    frame(slots[0], (count - 0.12) / count, 0),
-    frame(slots[0], 1),
+    frame(slots.at(-1), duration - 840, 0),
+    frame(slots[0], duration - 720, 0),
+    frame(slots[0], duration),
   );
   return frames;
 }

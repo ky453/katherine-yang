@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { assetUrl } from "../lib/assets";
-import { arcKeyframes, arcSlots } from "../lib/heroCarousel";
+import { arcKeyframes, arcSlots, CAROUSEL_STEP_MS } from "../lib/heroCarousel";
 
 const PAGES = [
   { id: "work", title: "Work", caption: "Selected work", href: "#/work", motif: "folder" },
@@ -9,7 +9,6 @@ const PAGES = [
   { id: "resume", title: "Résumé", caption: "Experience", href: assetUrl("resume.pdf"), motif: "document", external: true },
 ];
 const SLOTS = arcSlots(PAGES.length);
-const STEP_DURATION = 6000;
 
 export default function HeroCarousel({ paused, staticLayout }) {
   const cardRefs = useRef([]);
@@ -21,10 +20,10 @@ export default function HeroCarousel({ paused, staticLayout }) {
     if (staticLayout) return;
     animations.current = cardRefs.current.map((element, index) => {
       const animation = element.animate(arcKeyframes(PAGES.length), {
-        duration: PAGES.length * STEP_DURATION,
+        duration: PAGES.length * CAROUSEL_STEP_MS,
         iterations: Infinity,
       });
-      animation.currentTime = index * STEP_DURATION;
+      animation.currentTime = index * CAROUSEL_STEP_MS;
       return animation;
     });
     return () => {

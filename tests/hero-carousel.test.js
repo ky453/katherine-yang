@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { arcKeyframes, arcSlots } from "../src/lib/heroCarousel.js";
+import { arcKeyframes, arcSlots, CAROUSEL_PAUSE_MS, CAROUSEL_SWIPE_MS, CAROUSEL_STEP_MS } from "../src/lib/heroCarousel.js";
 
 test("carousel slots form an upright, balanced lower arc", () => {
   const slots = arcSlots(4);
@@ -29,4 +29,20 @@ test("rightmost card fades before wrapping to the left, without tilting", () => 
 test("the arc supports an additional card without changing its geometry rules", () => {
   assert.equal(arcSlots(5).length, 5);
   assert.equal(arcKeyframes(5).length, 13);
+});
+
+test("each card waits 1.8 seconds without speeding up the original swipe", () => {
+  const frames = arcKeyframes(4);
+  const duration = 4 * CAROUSEL_STEP_MS;
+  assert.equal(CAROUSEL_PAUSE_MS, 1800);
+  assert.equal(CAROUSEL_SWIPE_MS, 1320);
+  for (let index = 0; index < 4; index++) {
+    const start = frames[index * 2].offset * duration;
+    const holdEnd = frames[index * 2 + 1].offset * duration;
+    assert.ok(Math.abs(holdEnd - start - 1800) < 0.001);
+    assert.ok(Math.abs((index + 1) * CAROUSEL_STEP_MS - holdEnd - 1320) < 0.001);
+  }
+  assert.ok(Math.abs(frames.at(-3).offset * duration - frames[7].offset * duration - 480) < 0.001);
+  assert.ok(Math.abs((frames.at(-2).offset - frames.at(-3).offset) * duration - 120) < 0.001);
+  assert.ok(Math.abs((1 - frames.at(-2).offset) * duration - 720) < 0.001);
 });
