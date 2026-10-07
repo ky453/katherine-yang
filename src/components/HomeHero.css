@@ -75,7 +75,8 @@
 
 .home-landing-portrait {
   position: absolute;
-  left: 43%;
+  left: 61%;
+  transform: translateX(-50%);
   top: 10%;
   width: 28%;
   max-width: 360px;
@@ -112,7 +113,7 @@
 .hero-carousel {
   position: absolute;
   left: 26%;
-  top: 48%;
+  top: calc(48% + 40px);
   width: 70%;
   height: 248px;
   z-index: 3;
@@ -198,7 +199,7 @@
   .home-landing-statement { font-size: 20px; margin-top: 18px; }
   .home-landing-studies { margin-top: 16px; }
   .home-landing-portrait { top: 10%; max-width: 275px; }
-  .hero-carousel { top: 48%; height: 200px; }
+  .hero-carousel { top: calc(48% + 40px); height: 200px; }
   .hero-carousel-card { height: 172px; }
   .hero-carousel-link { gap: 10px; padding-block: 14px; }
   .hero-carousel-link .hero-motif { width: 42px; height: 42px; }
@@ -215,7 +216,7 @@
   .home-landing-intro,
   .home-landing-portrait { position: relative; inset: auto; width: 100%; }
   .home-landing h1 { font-size: 74px; }
-  .home-landing-portrait { justify-self: center; width: 85%; max-width: 320px; }
+  .home-landing-portrait { justify-self: center; width: 85%; max-width: 320px; transform: none; }
   .hero-carousel { position: relative; inset: auto; width: 100%; grid-column: 1 / -1; height: 260px; }
   .home-landing-motion { position: relative; justify-self: end; grid-column: 1 / -1; }
 }
