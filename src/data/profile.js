@@ -9,8 +9,13 @@ export const CURRENTLY_ITEMS = [
 ];
 
 export const PLAYGROUND_PHOTOS = [
+  // Notes and years are intentionally blank; add your own observations here.
   {
     id: "barcelona",
+    title: "Barcelona",
+    location: "Barcelona",
+    year: "",
+    note: "",
     path: "/assets/photos/travel/spain-barcelona.jpg",
     caption: "A day among the mosaics in Barcelona.",
     alt: "Katherine in front of colorful mosaic architecture in Barcelona",
@@ -18,6 +23,10 @@ export const PLAYGROUND_PHOTOS = [
   },
   {
     id: "mapo-tofu",
+    title: "Dinner, with flowers",
+    location: "",
+    year: "",
+    note: "",
     path: "/assets/photos/food/mapo-tofu.jpg",
     caption: "Dinner, with flowers on the table.",
     alt: "Homemade mapo tofu and side dishes on a table with pink flowers",
@@ -25,6 +34,10 @@ export const PLAYGROUND_PHOTOS = [
   },
   {
     id: "lookout",
+    title: "At a lookout",
+    location: "",
+    year: "",
+    note: "",
     path: "/assets/photos/travel/spain-tibidabo.jpg",
     caption: "At a lookout, with mountains all around.",
     alt: "Katherine in a red dress beside a carved stone figure above a green valley",
@@ -32,6 +45,10 @@ export const PLAYGROUND_PHOTOS = [
   },
   {
     id: "sendoff",
+    title: "Cornell in Shanghai",
+    location: "Shanghai",
+    year: "",
+    note: "",
     path: "/assets/photos/mcsa/mcsa-shanghai-sendoff.jpg",
     caption: "A little Cornell in Shanghai.",
     alt: "Katherine with fellow Cornell students at a Shanghai send-off gathering",
@@ -39,6 +56,10 @@ export const PLAYGROUND_PHOTOS = [
   },
   {
     id: "peach-burrata",
+    title: "Peaches and burrata",
+    location: "",
+    year: "",
+    note: "",
     path: "/assets/photos/food/peach-burrata-salad.jpg",
     caption: "Peaches, burrata, and a very good plate.",
     alt: "Peach and burrata salad with greens on a dark serving plate",
@@ -46,10 +67,25 @@ export const PLAYGROUND_PHOTOS = [
   },
   {
     id: "japan",
+    title: "Japan",
+    location: "Japan",
+    year: "",
+    note: "",
     path: "/assets/photos/travel/japan-1.jpg",
     caption: "A quiet moment in Japan.",
     alt: "Katherine in a patterned blue kimono outside a traditional wooden building",
     layout: "portrait-small",
+  },
+  {
+    id: "yunnan",
+    title: "Yunnan",
+    location: "Yunnan",
+    year: "",
+    note: "",
+    path: "/assets/photos/travel/yunnan-2.jpg",
+    caption: "A moment in Yunnan.",
+    alt: "Katherine in a fur hat with mountain peaks and tiled rooftops behind her in Yunnan",
+    layout: "wide",
   },
 ];
 
@@ -79,4 +115,3 @@ export const SKILLS = [
 ];
 
 export const ABOUT_INTRO = "I'm interested in products because they sit between systems and people. My technical background helps me understand what can be built; design helps me see how it should feel; visual studies keeps me asking what choices mean and who they're for. I'm especially drawn to work where the problem is still a little fuzzy and the team has to figure out what matters before deciding what to build.";
-
