@@ -2,49 +2,12 @@ import { Currently, PhotoFigure } from "../components/PersonalSections";
 import ProjectPreview from "../components/ProjectPreview";
 import { ABOUT_INTRO, PLAYGROUND_PHOTOS } from "../data/profile";
 import { FEATURED_PROJECTS, PROJECTS } from "../data/projects";
-import { assetUrl } from "../lib/assets";
+import HomeHero from "../components/HomeHero";
 
 export default function Home() {
   return (
     <>
-      <section className="hero" id="top">
-        <div className="hero-opening">
-          <div className="hero-copy">
-            <span className="kicker">Katherine Yang</span>
-            <h1>
-              Product manager,
-              <br />
-              <em>designer when needed,</em>
-              <br />
-              builder when useful.
-            </h1>
-
-            <div className="hero-intro-card">
-              <span className="intro-label">INTRO</span>
-              <p>
-                I make things to understand <mark>how they work</mark>. I'm curious
-                about what people expect from a product, and the <mark>small details</mark>
-                {" "}that help them find their way.
-              </p>
-            </div>
-
-            <a className="scroll-cue" href="#/work">
-              take a look at the work <span>↓</span>
-            </a>
-          </div>
-
-          <figure className="hero-portrait">
-            <div className="portrait-image-shell">
-              <img
-                src={assetUrl("/assets/photos/me/head-shot.jpg")}
-                alt="Katherine Yang, portrait"
-                fetchPriority="high"
-              />
-            </div>
-            <figcaption className="hand">currently in Ithaca, NY</figcaption>
-          </figure>
-        </div>
-      </section>
+      <HomeHero />
 
       <Currently />
       <section className="home-section" aria-labelledby="featured-title">

@@ -1,0 +1,324 @@
+.home-mindmap {
+  width: min(100% - 48px, 1440px);
+  margin: 0 auto;
+  padding: 32px 0 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-mindmap-stage {
+  position: relative;
+  height: 640px;
+  isolation: isolate;
+}
+
+.home-mindmap-intro {
+  position: absolute;
+  left: 0;
+  top: 13%;
+  width: 28%;
+  max-width: 370px;
+}
+
+.home-mindmap h1 {
+  margin: 0;
+  font-family: "Instrument Serif", serif;
+  font-size: 92px;
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: 0;
+}
+
+.home-mindmap h1 span {
+  display: block;
+}
+
+.home-mindmap h1::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin-top: 22px;
+  background: var(--mint-strong);
+}
+
+.home-mindmap-statement {
+  max-width: 330px;
+  margin: 26px 0 0;
+  font-family: "Instrument Serif", serif;
+  font-size: 25px;
+  line-height: 1.3;
+}
+
+.home-mindmap-studies {
+  max-width: 280px;
+  margin: 22px 0 0;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.home-mindmap-portrait {
+  position: absolute;
+  left: 55%;
+  top: 32%;
+  width: 23%;
+  max-width: 310px;
+  aspect-ratio: 0.98;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 42% 58% 51% 49% / 53% 57% 43% 47%;
+}
+
+.home-mindmap-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 43%;
+}
+
+.home-mindmap-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: visible;
+  pointer-events: none;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 1;
+}
+
+.home-mindmap-lines path {
+  opacity: 0.3;
+  vector-effect: non-scaling-stroke;
+  transition: opacity 180ms ease;
+}
+
+.home-mindmap-branch {
+  position: absolute;
+}
+
+.home-mindmap-bubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 28px 34px;
+  text-align: center;
+  transition: transform 180ms ease;
+}
+
+.home-mindmap-bubble h2 {
+  margin: 0;
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.home-mindmap-bubble p {
+  margin: 10px 0 0;
+  font-family: "Instrument Serif", serif;
+  font-size: 29px;
+  line-height: 1.2;
+}
+
+.home-mindmap-bubble:hover,
+.home-mindmap-bubble:focus-visible {
+  transform: translateY(-3px);
+}
+
+.home-mindmap-bubble:hover h2,
+.home-mindmap-bubble:focus-visible h2 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.home-mindmap-bubble:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 5px;
+}
+
+.home-mindmap-note {
+  max-width: 205px;
+  margin: 12px auto 0;
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.home-mindmap-branch--product {
+  left: 36%;
+  top: 0;
+  width: 26%;
+}
+
+.home-mindmap-branch--product .home-mindmap-bubble {
+  min-height: 164px;
+  background: color-mix(in srgb, var(--lavender) 68%, var(--paper));
+  border-radius: 48% 52% 44% 56% / 51% 57% 43% 49%;
+}
+
+.home-mindmap-branch--product .home-mindmap-bubble p {
+  font-size: 34px;
+}
+
+.home-mindmap-branch--people {
+  left: 80%;
+  top: 9%;
+  width: 20%;
+}
+
+.home-mindmap-branch--people .home-mindmap-bubble {
+  min-height: 190px;
+  background: color-mix(in srgb, var(--mint) 56%, var(--paper));
+  border-radius: 53% 47% 58% 42% / 46% 55% 45% 54%;
+  padding: 28px;
+}
+
+.home-mindmap-branch--making {
+  left: 80%;
+  top: 57%;
+  width: 20%;
+}
+
+.home-mindmap-branch--making .home-mindmap-bubble {
+  min-height: 166px;
+  padding: 24px;
+  background: color-mix(in srgb, var(--lavender) 42%, var(--paper));
+  border-radius: 58% 42% 46% 54% / 48% 55% 45% 52%;
+}
+
+.home-mindmap-branch--making .home-mindmap-bubble p,
+.home-mindmap-branch--details .home-mindmap-bubble p {
+  font-size: 27px;
+}
+
+.home-mindmap-branch--details {
+  left: 31%;
+  top: 54%;
+  width: 23%;
+}
+
+.home-mindmap-branch--details .home-mindmap-bubble {
+  min-height: 176px;
+  background: color-mix(in srgb, var(--mint) 22%, var(--paper));
+  border: 1px solid var(--line);
+  border-radius: 44% 56% 52% 48% / 54% 44% 56% 46%;
+}
+
+.home-mindmap-branch--curiosity {
+  left: 54%;
+  top: 84%;
+  width: 25%;
+}
+
+.home-mindmap-branch--curiosity .home-mindmap-bubble {
+  min-height: 112px;
+  padding: 18px 32px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 53% 47% 45% 55% / 43% 51% 49% 57%;
+}
+
+.home-mindmap-branch--curiosity .home-mindmap-bubble p {
+  font-size: 23px;
+}
+
+/* Follow the focused branch without adding movement to the connectors. */
+.home-mindmap-stage:has(.home-mindmap-branch--product:is(:hover, :focus-within)) .home-mindmap-line--product,
+.home-mindmap-stage:has(.home-mindmap-branch--people:is(:hover, :focus-within)) .home-mindmap-line--people,
+.home-mindmap-stage:has(.home-mindmap-branch--making:is(:hover, :focus-within)) .home-mindmap-line--making,
+.home-mindmap-stage:has(.home-mindmap-branch--details:is(:hover, :focus-within)) .home-mindmap-line--details,
+.home-mindmap-stage:has(.home-mindmap-branch--curiosity:is(:hover, :focus-within)) .home-mindmap-line--curiosity {
+  opacity: 0.6;
+}
+
+@media (max-width: 1250px) {
+  .home-mindmap h1 { font-size: 78px; }
+  .home-mindmap-statement { font-size: 23px; }
+  .home-mindmap-bubble { padding: 26px; }
+  .home-mindmap-branch--product .home-mindmap-bubble p { font-size: 30px; }
+  .home-mindmap-branch--people .home-mindmap-bubble p { font-size: 27px; }
+  .home-mindmap-branch--making .home-mindmap-bubble p,
+  .home-mindmap-branch--details .home-mindmap-bubble p { font-size: 25px; }
+}
+
+@media (min-width: 1101px) and (max-height: 800px) {
+  .home-mindmap { padding: 22px 0; }
+  .home-mindmap-stage { height: 560px; }
+  .home-mindmap-portrait { top: 37%; max-width: 230px; }
+  .home-mindmap-branch--product .home-mindmap-bubble { min-height: 148px; }
+  .home-mindmap-branch--people .home-mindmap-bubble { min-height: 170px; }
+  .home-mindmap-branch--curiosity { top: auto; bottom: 0; }
+}
+
+@media (max-width: 1100px) {
+  .home-mindmap-stage {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 34px 28px;
+  }
+
+  .home-mindmap-intro,
+  .home-mindmap-portrait,
+  .home-mindmap-branch {
+    position: relative;
+    inset: auto;
+    width: 100%;
+  }
+
+  .home-mindmap-intro { max-width: 370px; }
+  .home-mindmap-portrait { justify-self: center; max-width: 310px; }
+  .home-mindmap-lines { display: none; }
+  .home-mindmap-branch { max-width: 370px; justify-self: center; }
+  .home-mindmap-branch--curiosity { grid-column: 1 / -1; max-width: 310px; }
+}
+
+@media (max-width: 600px) {
+  .home-mindmap {
+    width: calc(100% - 32px);
+    padding: 30px 0;
+  }
+
+  .home-mindmap-stage {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
+  }
+
+  .home-mindmap h1 { font-size: 68px; }
+  .home-mindmap-statement { max-width: 350px; font-size: 24px; }
+  .home-mindmap-portrait { width: 76%; max-width: 280px; }
+  .home-mindmap-branch { width: 92%; }
+  .home-mindmap-branch--people,
+  .home-mindmap-branch--details { justify-self: end; }
+  .home-mindmap-branch--product,
+  .home-mindmap-branch--making { justify-self: start; }
+  .home-mindmap-branch--curiosity { width: 86%; }
+
+  /* Short curves keep the mobile sequence connected without shrinking the map. */
+  .home-mindmap-branch::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -29px;
+    width: 18px;
+    height: 22px;
+    border-left: 1px solid var(--line);
+    border-radius: 60% 0 0 40%;
+    transform: rotate(16deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-mindmap-bubble,
+  .home-mindmap-lines path { transition: none; }
+  .home-mindmap-bubble:hover,
+  .home-mindmap-bubble:focus-visible { transform: none; }
+}
