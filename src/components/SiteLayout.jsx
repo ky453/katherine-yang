@@ -34,26 +34,25 @@ export default function SiteLayout({ activePage, children }) {
         </a>
       </header>
       {children}
-      <footer>
-        <div className="footer-note hand">one last note →</div>
-        <h2>
-          Let's make something
-          <br />
-          people actually want to use.
-        </h2>
-
-        <div className="footer-row">
-          <div className="footer-links">
-            <a href="mailto:your-email@cornell.edu">Email ↗</a>
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <div className="footer-intro">
+            <a className="footer-name" href="#/">Katherine Yang</a>
+            <p>Thanks for stopping by.</p>
+          </div>
+          <nav className="footer-links" aria-label="Contact and résumé">
+            <a href="mailto:your-email@cornell.edu">Email <span aria-hidden="true">↗</span></a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-              LinkedIn ↗
+              LinkedIn <span aria-hidden="true">↗</span>
             </a>
             <a href="https://github.com/ky453" target="_blank" rel="noreferrer">
-              GitHub ↗
+              GitHub <span aria-hidden="true">↗</span>
             </a>
-          </div>
-
-          <p>Designed and coded by Katherine Yang · 2026</p>
+            <a href={assetUrl("resume.pdf")} target="_blank" rel="noreferrer">
+              Résumé <span aria-hidden="true">↗</span>
+            </a>
+          </nav>
+          <p className="footer-copyright">© 2026 Katherine Yang</p>
         </div>
       </footer>
     </div>

@@ -1224,44 +1224,77 @@ a {
   line-height: 1.7;
 }
 
-footer {
-  padding: 100px max(24px, calc((100vw - 1440px) / 2 + 24px)) 38px;
-  background: var(--mint);
+.site-footer {
+  --muted: #62645f;
+  padding: 28px max(24px, calc((100vw - 1440px) / 2 + 24px)) 24px;
+  border-top: 2px solid var(--mint-strong);
+  background: #ece8f3;
 }
 
-.footer-note {
-  font-size: 22px;
-}
-
-footer h2 {
-  max-width: 1200px;
-  margin: 22px 0 100px;
-  font-size: clamp(68px, 9vw, 132px);
-  line-height: .86;
-  letter-spacing: -.075em;
-}
-
-.footer-row {
-  padding-top: 22px;
-  border-top: 1px solid rgba(23,24,19,.25);
-  display: flex;
-  justify-content: space-between;
+.footer-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px 24px;
   align-items: center;
+}
+
+.footer-name {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  background: linear-gradient(transparent 65%, var(--mint) 65%, var(--mint) 95%, transparent 95%);
+}
+
+.footer-intro p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .footer-links {
   display: flex;
-  gap: 28px;
+  flex-wrap: wrap;
+  gap: 4px 20px;
 }
 
-.footer-row a,
-.footer-row p {
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
   font-family: "DM Mono", monospace;
-  font-size: 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px;
+  white-space: nowrap;
 }
 
-.footer-row p {
+.site-footer a:hover {
+  text-decoration-line: underline;
+  text-decoration-color: var(--mint-strong);
+}
+
+.site-footer a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+  background-color: var(--mint);
+}
+
+.footer-copyright {
+  grid-column: 1 / -1;
+  justify-self: end;
+  width: 100%;
   margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: right;
 }
 
 @media (max-width: 1000px) {
@@ -1512,15 +1545,23 @@ footer h2 {
     padding-right: 16px;
   }
 
-  footer {
+  .site-footer {
+    padding-top: 24px;
     padding-left: 16px;
     padding-right: 16px;
   }
 
-  .footer-row {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 28px;
+  .footer-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-links {
+    gap: 4px 16px;
+  }
+
+  .footer-copyright {
+    justify-self: start;
+    text-align: left;
   }
 }
 
