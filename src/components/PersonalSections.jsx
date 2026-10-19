@@ -75,11 +75,13 @@ export function ExperienceSkills() {
             <li className="exp-item" key={job.org}>
               <span className="exp-org">{job.org}</span>
               <span className="exp-role">{job.role}</span>
-              <span className="exp-meta">{job.meta}</span>
+              {(job.dates || job.location) && (
+                <span className="exp-meta">{[job.dates, job.location].filter(Boolean).join(" · ")}</span>
+              )}
+              <p className="exp-description">{job.description}</p>
             </li>
           ))}
         </ul>
-        <p className="exp-more">— more added as they happen —</p>
       </div>
 
       <div className="skills-col">

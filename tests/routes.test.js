@@ -19,6 +19,14 @@ test("every published project has a direct detail route", () => {
   }
 });
 
+test("résumé-backed projects are listed with supported details and no placeholder sections", () => {
+  for (const id of ["duolingo", "cornell-movies", "recipe-generator"]) {
+    assert.ok(PROJECT_ORDER.includes(id));
+    assert.ok(PROJECTS[id].summary);
+    assert.ok(PROJECTS[id].sections.every((section) => !section.placeholder));
+  }
+});
+
 test("existing query-string project links still resolve", () => {
   for (const id of PROJECT_ORDER) {
     const path = locationPath(new URL(`https://ky453.github.io/?view=${id}`));

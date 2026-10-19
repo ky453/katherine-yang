@@ -6,7 +6,7 @@ const PAGES = [
   { id: "work", title: "Work", caption: "Selected work", href: "#/work", motif: "folder" },
   { id: "about", title: "About", caption: "My story", href: "#/about", motif: "person" },
   { id: "playground", title: "Playground", caption: "Things I notice", href: "#/playground", motif: "spark" },
-  { id: "resume", title: "Résumé", caption: "Experience", href: assetUrl("resume.pdf"), motif: "document", external: true },
+  { id: "resume", title: "Résumé", caption: "Experience", href: assetUrl("assets/Katherine_Yang_PM_Resume.pdf"), motif: "document", external: true },
 ];
 const SLOTS = arcSlots(PAGES.length);
 

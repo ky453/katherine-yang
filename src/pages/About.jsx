@@ -14,7 +14,7 @@ export default function About() {
           <h2>
             Information Science
             <br />
-            <span className="plus">+</span> History of Art
+            <span className="plus">+</span> Art History
           </h2>
           <p className="hand">a strange combination that makes a lot of sense</p>
 

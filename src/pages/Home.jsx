@@ -24,7 +24,7 @@ export default function Home() {
       <section className="home-section home-about-preview" aria-labelledby="about-preview-title">
         <div>
           <span className="mini-label">ABOUT</span>
-          <h2 id="about-preview-title">Information Science <span className="preview-plus">+</span> History of Art</h2>
+            <h2 id="about-preview-title">Information Science <span className="preview-plus">+</span> Art History</h2>
           <p>{ABOUT_INTRO.slice(0, ABOUT_INTRO.indexOf(".") + 1)}</p>
           <a className="case-link" href="#/about">More about me →</a>
         </div>

@@ -49,7 +49,7 @@ export default function HonorCaseStudy() {
         </div>
         <div className="honor-section-content">
           <h2 id="honor-overview-title">Small movements set the rules.</h2>
-          <p>At HONOR, I worked on motion for mobile product experiences.</p>
+          <p>At HONOR in Shenzhen, I was a UX Motion Design Intern from June to August 2025, working on motion for mobile, tablet, and foldable product experiences.</p>
           <p>
             A lot of the work looked small on the surface: an onboarding transition, the timing
             of an element entering the screen, or how one state hands off to another.

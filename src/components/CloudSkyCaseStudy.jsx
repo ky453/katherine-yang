@@ -4,14 +4,16 @@ function CloudSkyCaseStudy() {
       <section className="cloudsky-intro">
         <div>
           <span className="cloudsky-section-number">01 / 06</span>
-          <span className="cloudsky-role">Product Management Intern</span>
+          <span className="cloudsky-role">Product Manager Intern · Shenzhen · Jul–Aug 2026</span>
           <h2>Making cloud PC flows work across devices.</h2>
         </div>
         <p>
           CloudSky gives people a remote Windows computer for games and demanding
           applications. My work focused on making the product behavior clearer across
           PC, Mac, Android, and web touchpoints, from payment and remote-session
-          controls to setup guidance.
+          controls to setup guidance. During my internship, daily new users grew 66%,
+          active users 49%, and paying users 40%; those figures describe the period,
+          not a result attributed to my work.
         </p>
       </section>
 

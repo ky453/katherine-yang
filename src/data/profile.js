@@ -91,26 +91,54 @@ export const PLAYGROUND_PHOTOS = [
 
 export const ABOUT_FACTS = [
   { label: "based in", value: "Ithaca, NY" },
-  { label: "studying", value: "Information Science + History of Art, Cornell" },
+  { label: "studying", value: "B.A. in Information Science & Art History; Business minor, Cornell University · May 2028" },
 ];
 
 export const EXPERIENCE = [
-  { org: "CloudSky", role: "Product Management Intern", meta: "2025" },
-  { org: "HONOR", role: "UX and Motion Design Intern", meta: "2025" },
+  {
+    org: "Cloudsky - Panghe Cloud Gaming",
+    role: "Product Manager Intern",
+    dates: "Jul 2026 - Aug 2026",
+    location: "Shenzhen, China",
+    description: "Mapped customer journeys across payment, balance, queues, sessions, and storage, then organized customer and competitive signals into product recommendations. Worked with design, engineering, and operations on product behavior, documentation, and release workflows.",
+  },
+  {
+    org: "HONOR",
+    role: "UX Motion Design Intern",
+    dates: "Jun 2025 - Aug 2025",
+    location: "Shenzhen, China",
+    description: "Designed onboarding interactions for mobile, tablet, and foldable products with designers and engineers. Reviewed motion patterns across consumer devices, using AI-assisted synthesis and checking the findings against the products.",
+  },
+  {
+    org: "China Merchants Bank",
+    role: "Account Manager Intern, Corporate Banking",
+    dates: "Jun 2024 - Aug 2024",
+    location: "Shenzhen, China",
+    description: "Researched corporate clients' business models, financial positions, competition, and financing needs. Joined client visits and prepared KYC and due-diligence materials for onboarding and relationship management.",
+  },
+  {
+    org: "Cornell MCSA",
+    role: "President",
+    description: "Led teams across programming, external relations, publicity, and operations; secured $16K+ in sponsorships and started a Shanghai forum connecting incoming students with campus resources.",
+  },
 ];
 
 export const SKILLS = [
   {
-    category: "Product",
-    items: ["Product strategy", "User research", "Prioritization", "Product requirements"],
+    category: "Product & research",
+    items: ["Product strategy", "Customer research", "User interviews", "Usability testing", "Requirements & use cases", "User journeys", "Competitive analysis", "MVP prioritization", "Experimentation", "Product metrics"],
   },
   {
-    category: "Design",
-    items: ["Figma", "Prototyping", "Interaction design", "Motion"],
+    category: "AI & prototyping",
+    items: ["Prompt & context engineering", "RAG", "AI agents", "AI-assisted research and synthesis", "AI prototyping", "ChatGPT", "Claude", "Codex", "Gemini", "Lovart", "Image 2", "Seedance"],
   },
   {
-    category: "Build",
-    items: ["React", "JavaScript", "HTML/CSS", "Git & GitHub"],
+    category: "Design & business",
+    items: ["Figma", "Lottie", "Excel", "Notion", "English", "Mandarin Chinese"],
+  },
+  {
+    category: "Technical",
+    items: ["Python", "JavaScript", "React", "Vue.js", "Node.js", "Express.js", "REST APIs", "MongoDB", "WebLLM", "PWA", "Git/GitHub", "HTML/CSS"],
   },
 ];
 

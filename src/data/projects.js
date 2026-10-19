@@ -17,7 +17,7 @@
       automatically. No route or navigation changes are needed.
    ─────────────────────────────────────────────────────── */
 
-export const PROJECT_ORDER = ["cloudsky", "sidequest", "honor"];
+export const PROJECT_ORDER = ["cloudsky", "duolingo", "cornell-movies", "recipe-generator", "sidequest", "honor"];
 export const FEATURED_PROJECTS = ["cloudsky", "sidequest"];
 
 const SECTION_PROMPTS = {
@@ -59,26 +59,34 @@ function buildSections({ overview, question }) {
   ];
 }
 
+function conciseSections({ overview, role, work }) {
+  return [
+    { heading: "Overview", body: overview },
+    { heading: "My role", body: role },
+    { heading: "What I worked on", body: work },
+  ];
+}
+
 export const PROJECTS = {
   cloudsky: {
     id: "cloudsky",
     number: "01",
-    eyebrow: "PRODUCT MANAGEMENT INTERN",
+    eyebrow: "PRODUCT MANAGER INTERN · SHENZHEN · JUL–AUG 2026",
     title: "CloudSky",
     question: "How should a cloud PC product behave across devices and edge cases?",
     summary:
-      "I worked through product requirements and user guidance for a cloud PC service, covering cross-platform payment, local-to-cloud workflows, session controls, and the edge states that make those experiences predictable.",
+      "At Cloudsky - Panghe Cloud Gaming, I worked on product requirements and user guidance for a cloud PC service, covering cross-platform payment, local-to-cloud workflows, session controls, and edge states.",
     tags: ["Product requirements", "Cross-platform UX", "Payments", "Cloud PC"],
     art: "cloudsky",
     sections: buildSections({
       overview:
-        "I worked through product requirements and user guidance for a cloud PC service, covering cross-platform payment, local-to-cloud workflows, session controls, and the edge states that make those experiences predictable.",
+        "At Cloudsky - Panghe Cloud Gaming, I worked on product requirements and user guidance for a cloud PC service, covering cross-platform payment, local-to-cloud workflows, session controls, and edge states. During the internship period, daily new users grew 66%, active users 49%, and paying users 40%; these figures describe the period, not an outcome attributed to my work.",
       question: "How should a cloud PC product behave across devices and edge cases?",
     }),
   },
   sidequest: {
     id: "sidequest",
-    number: "02",
+    number: "05",
     eyebrow: "A PERSONAL PROJECT TAKING SHAPE",
     title: "Sidequest",
     question:
@@ -96,8 +104,8 @@ export const PROJECTS = {
   },
   honor: {
     id: "honor",
-    number: "03",
-    eyebrow: "MOTION FOR MOBILE INTERFACES",
+    number: "06",
+    eyebrow: "UX MOTION DESIGN INTERN · SHENZHEN · JUN–AUG 2025",
     title: "HONOR",
     question:
       "When does motion make an interface easier to understand, rather than just prettier?",
@@ -110,6 +118,52 @@ export const PROJECTS = {
         "A motion exploration into the difference between decoration and clarity — using movement to show hierarchy and guide attention on purpose, as part of a system, not a flourish on top of one.",
       question:
         "When does motion make an interface easier to understand, rather than just prettier?",
+    }),
+  },
+  duolingo: {
+    id: "duolingo",
+    number: "02",
+    eyebrow: "DIGITAL PRODUCT DESIGN",
+    title: "Duolingo Podcast Feature",
+    question: "How could language practice help learners feel ready to listen and speak in the real world?",
+    summary: "A product design project exploring the gap between gamified lessons and real-world listening and speaking, with a podcast feature as the direction to develop.",
+    tags: ["Customer research", "Product strategy", "Usability testing", "Product metrics"],
+    art: "duolingo",
+    thumbnail: "/assets/photos/duolingo-project/hi-fi.png",
+    sections: conciseSections({
+      overview: "I looked at where gamified language lessons fell short of real-world listening and speaking practice, including confidence, grammar, and context.",
+      role: "I conducted qualitative research, compared possible feature directions, and iterated on the podcast concept after usability testing.",
+      work: "I weighed podcast learning, AI pronunciation coaching, and peer exchange against user value, feasibility, and scalability. Testing surfaced friction in finding, playing, and saving podcast content. I also defined engagement, completion, and repeat-listening measures for evaluating adoption and learning behavior after launch.",
+    }),
+  },
+  "cornell-movies": {
+    id: "cornell-movies",
+    number: "03",
+    eyebrow: "FULL-STACK COMMUNITY EVENTS PRODUCT",
+    title: "Cornell Movies",
+    question: "A full-stack product for discovering community events.",
+    summary: "A full-stack event discovery product with search, filters, event details, likes, and loading and error states.",
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "REST APIs"],
+    art: "cornell-movies",
+    sections: conciseSections({
+      overview: "Cornell Movies is a full-stack community events product for discovering events.",
+      role: "I built the application and used Codex, Copilot, and AI-assisted debugging to work through implementation and front-end/back-end integration, checking generated code against product requirements and observed behavior.",
+      work: "The product supports event search, filtering, event details, likes, and loading and error states. Its stack includes React, Node.js, Express.js, MongoDB, and REST APIs.",
+    }),
+  },
+  "recipe-generator": {
+    id: "recipe-generator",
+    number: "04",
+    eyebrow: "LOCAL LLM · RECIPE ASSISTANT",
+    title: "Local LLM AI Recipe Generator",
+    question: "How can a browser-based recipe assistant adapt suggestions to a person's preferences and constraints?",
+    summary: "A task-specific recipe assistant using a local browser LLM to shape recipe suggestions around user preferences and constraints.",
+    tags: ["Vue.js", "WebLLM", "Prompt engineering", "PWA"],
+    art: "recipe-generator",
+    sections: conciseSections({
+      overview: "I’m building a recipe assistant that runs a local language model in the browser and turns user preferences and constraints into tailored recipe outputs.",
+      role: "I used an AI coding agent guided by an AGENTS.md specification to prototype and refine the application, including configurable personas and output formats.",
+      work: "The project uses Vue.js and WebLLM. I adjust prompts and response formats while balancing output quality with latency, and have deployed the experience as an installable progressive web app.",
     }),
   },
 };

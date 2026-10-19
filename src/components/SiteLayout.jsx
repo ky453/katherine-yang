@@ -29,7 +29,7 @@ export default function SiteLayout({ activePage, children }) {
             </a>
           ))}
         </nav>
-        <a className="resume" href={assetUrl("resume.pdf")} target="_blank" rel="noreferrer">
+        <a className="resume" href={assetUrl("assets/Katherine_Yang_PM_Resume.pdf")} target="_blank" rel="noreferrer">
           Résumé ↗
         </a>
       </header>
@@ -41,14 +41,14 @@ export default function SiteLayout({ activePage, children }) {
             <p>Thanks for stopping by.</p>
           </div>
           <nav className="footer-links" aria-label="Contact and résumé">
-            <a href="mailto:your-email@cornell.edu">Email <span aria-hidden="true">↗</span></a>
+            <a href="mailto:ky453@cornell.edu">Email <span aria-hidden="true">↗</span></a>
             <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
               LinkedIn <span aria-hidden="true">↗</span>
             </a>
             <a href="https://github.com/ky453" target="_blank" rel="noreferrer">
               GitHub <span aria-hidden="true">↗</span>
             </a>
-            <a href={assetUrl("resume.pdf")} target="_blank" rel="noreferrer">
+            <a href={assetUrl("assets/Katherine_Yang_PM_Resume.pdf")} target="_blank" rel="noreferrer">
               Résumé <span aria-hidden="true">↗</span>
             </a>
           </nav>
