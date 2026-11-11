@@ -73,6 +73,22 @@
   letter-spacing: 0;
 }
 
+.home-landing-ask {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  margin: 20px 0 0 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--ink);
+  border-radius: 5px;
+  color: var(--ink);
+  background: var(--mint);
+  font: 500 11px/1.5 "Inter", sans-serif;
+  cursor: pointer;
+}
+.home-landing-ask:hover { background: var(--cream); }
+
 .home-landing-portrait {
   position: absolute;
   left: 61%;

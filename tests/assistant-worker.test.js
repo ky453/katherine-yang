@@ -65,6 +65,8 @@ test("upstream request keeps secrets on the server and includes grounding and co
     assert.equal(payload.input[1].content, "CloudSky");
     assert.equal(payload.input.at(-1).content, "What about the growth?");
     assert.match(payload.instructions, /MUST NOT be attributed causally/);
+    assert.match(payload.instructions, /2–4 bullets/);
+    assert.match(payload.instructions, /60–120 words/);
     assert.match(payload.input[0].content, /semantic chunking/);
     assert.equal(payload.text.format.strict, true);
     return completed();

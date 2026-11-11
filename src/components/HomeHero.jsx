@@ -47,6 +47,14 @@ export default function HomeHero() {
           <p className="home-landing-studies">
             Information Science + History of Art at Cornell
           </p>
+          <button type="button" className="home-landing-ask" aria-controls="home-ask-katherine"
+            onClick={() => {
+              const section = document.getElementById("home-ask-katherine");
+              section?.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth", block: "start" });
+              section?.querySelector("textarea")?.focus({ preventScroll: true });
+            }}>
+            <span aria-hidden="true">✳</span> Ask my AI guide <span aria-hidden="true">↗</span>
+          </button>
         </div>
 
         <figure className="home-landing-portrait">

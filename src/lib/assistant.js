@@ -1,4 +1,5 @@
 import { KNOWLEDGE, SOURCES } from "../../content/katherineKnowledge.js";
+import { NOTE_SUMMARIES } from "../../content/assistantSummaries.js";
 
 export const MAX_QUESTION_LENGTH = 1000;
 export const MAX_HISTORY_MESSAGES = 8;
@@ -39,7 +40,9 @@ export function answerFromNotes(question, history = []) {
   if (!matches.length) return unknown;
   const selected = matches.slice(0, /compare|difference|both/i.test(question) ? 2 : 1);
   return {
-    answer: selected.map((note) => note.text).join("\n\n"),
+    answer: selected.map((note) => /more detail|tell me more|go on|walk me through|in depth|expand/i.test(question)
+      ? `### ${note.title}\n\n${note.text}`
+      : NOTE_SUMMARIES[note.id] || `### ${note.title}\n\n${note.text}`).join("\n\n"),
     sourceIds: sourcesFor(selected.flatMap((note) => note.sourceIds)).map((source) => source.id),
     mode: "notes",
   };

@@ -1,13 +1,17 @@
 # Ask Katherine
 
-The portfolio includes an English question-and-answer panel on every page. Its
+The portfolio includes an English question-and-answer panel on every page. Home
+embeds the chat directly below the hero, with a hero button that scrolls to it.
+Other pages keep the floating launcher. Both views share an in-memory conversation
+so visitors can follow a source into a project and continue asking questions.
+Answers render short paragraphs, headings, lists, and bold labels. Its
 knowledge is curated from Katherine's supplied résumé, supplemental project
 descriptions, and existing case studies. The raw Chinese coaching document is
 not included in the app, public assets, or model prompt.
 
 ## Available now: portfolio notes
 
-Run `npm run dev` and open **Ask Katherine** in the bottom-right corner. Without
+Run `npm run dev` and use the embedded homepage guide or **Ask Katherine** on other pages. Without
 `VITE_ASK_KATHERINE_URL`, the panel retrieves prepared English notes in the
 browser. It explicitly identifies these as prepared answers, not live AI.
 This works on GitHub Pages with no backend or API credits. Unmatched questions
@@ -69,6 +73,10 @@ for verifying production rate limits.
 - Edit `content/katherineKnowledge.js` to update public facts, matching keywords,
   source links, or suggested questions. Both the frontend and Worker import it.
   Rebuild the site and redeploy the Worker after changes.
+- `content/assistantSummaries.js` contains concise, formatted note answers.
+  Keep them consistent with the full knowledge. Requests for more detail show
+  the complete note. Live AI replies are prompted to lead with a direct answer
+  and use short labeled bullets when useful, usually in 60–120 words.
 - Supplemental notes support PantryPilot and the expanded payment/storage
   stories. The new résumé additionally supports the INFO 5940 multi-agent/RAG
   project. Interview-answer coaching and speculative growth explanations are
@@ -80,8 +88,9 @@ for verifying production rate limits.
   require English, third-person answers, uncertainty when facts are absent, and
   no invented achievements. These instructions reduce errors but cannot
   guarantee factual accuracy; review representative real answers before launch.
-- Sources are restricted to an allowlist. Model-generated text is rendered as
-  plain React text, never HTML or arbitrary Markdown links.
+- Sources are restricted to an allowlist. A small formatter renders headings,
+  lists, paragraphs, and bold as React elements. HTML, images, and generated
+  links remain inert text. Older plain-text replies get paragraph breaks too.
 - The endpoint validates JSON, body size, history roles, question length, and
   response shape. It has a 25-second upstream timeout and a bounded output.
 - Cloudflare bindings allow approximately six requests per visitor per minute

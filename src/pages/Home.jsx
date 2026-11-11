@@ -3,11 +3,13 @@ import ProjectPreview from "../components/ProjectPreview";
 import { ABOUT_INTRO, PLAYGROUND_PHOTOS } from "../data/profile";
 import { FEATURED_PROJECTS, PROJECTS } from "../data/projects";
 import HomeHero from "../components/HomeHero";
+import AskKatherine from "../components/AskKatherine";
 
 export default function Home() {
   return (
     <>
       <HomeHero />
+      <AskKatherine inline />
 
       <Currently />
       <section className="home-section" aria-labelledby="featured-title">
