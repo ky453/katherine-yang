@@ -48,8 +48,18 @@ index page. Refreshing a project URL does not need a custom 404 page or rewrite
 rules. A repository deployment might use:
 `https://ky453.github.io/katherine-yang/#/projects/cloudsky`.
 
-The existing resume link expects `public/resume.pdf`; that file is not currently
-in this repository. Add the actual PDF there when available.
+The résumé link uses `public/assets/Katherine_Yang_PM_Resume.pdf`.
+
+## Ask Katherine
+
+An English portfolio guide is available on every page. It uses prepared notes
+immediately; the included Cloudflare Worker enables OpenAI answers when configured.
+See [setup and deployment](docs/ask-katherine.md) for local development, secrets,
+GitHub Pages configuration, content updates, and verification.
+
+The public knowledge lives in `content/katherineKnowledge.js`. It includes the
+supplied résumé and English summaries of the supplemental project descriptions,
+with source links and explicit boundaries on outcomes and growth attribution.
 
 ## Adding Duolingo
 

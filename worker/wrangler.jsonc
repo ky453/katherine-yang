@@ -1,0 +1,23 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "ask-katherine",
+  "main": "index.js",
+  "compatibility_date": "2026-11-11",
+  "workers_dev": true,
+  "vars": {
+    "ALLOWED_ORIGINS": "https://ky453.github.io,http://localhost:5173,http://127.0.0.1:5173",
+    "OPENAI_MODEL": "gpt-5.6-terra"
+  },
+  "ratelimits": [
+    {
+      "name": "VISITOR_RATE_LIMITER",
+      "namespace_id": "45301",
+      "simple": { "limit": 6, "period": 60 }
+    },
+    {
+      "name": "SITE_RATE_LIMITER",
+      "namespace_id": "45302",
+      "simple": { "limit": 30, "period": 60 }
+    }
+  ]
+}

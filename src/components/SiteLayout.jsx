@@ -1,4 +1,5 @@
 import { assetUrl } from "../lib/assets";
+import AskKatherine from "./AskKatherine";
 
 const NAV_ITEMS = [
   { id: "home", title: "Home", href: "#/" },
@@ -55,6 +56,7 @@ export default function SiteLayout({ activePage, children }) {
           <p className="footer-copyright">© 2026 Katherine Yang</p>
         </div>
       </footer>
+      <AskKatherine />
     </div>
   );
 }
