@@ -23,7 +23,7 @@ export default function SiteLayout({ activePage, children }) {
       <a className="skip-link" href="#main-content" onClick={skipToContent}>Skip to content</a>
       <header className="topbar">
         <a className="wordmark" href="#/" aria-label="Katherine Yang home">
-          KATHERINE / <span>KY</span>
+          Katherine Yang
         </a>
         <nav className="nav-links" aria-label="Primary">
           {NAV_ITEMS.map((item) => (
@@ -41,13 +41,9 @@ export default function SiteLayout({ activePage, children }) {
         <div className="footer-inner">
           <div className="footer-intro">
             <a className="footer-name" href="#/">Katherine Yang</a>
-            <p>Thanks for stopping by.</p>
           </div>
           <nav className="footer-links" aria-label="Contact and résumé">
             <a href="mailto:ky453@cornell.edu">Email <span aria-hidden="true">↗</span></a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-              LinkedIn <span aria-hidden="true">↗</span>
-            </a>
             <a href="https://github.com/ky453" target="_blank" rel="noreferrer">
               GitHub <span aria-hidden="true">↗</span>
             </a>

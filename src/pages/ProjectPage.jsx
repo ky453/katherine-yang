@@ -1,4 +1,3 @@
-import { ProjectArt } from "../components/ProjectArt";
 import ProjectContent from "../components/ProjectContent";
 import ProjectNavigation from "../components/ProjectNavigation";
 import { PROJECTS, PROJECT_ORDER } from "../data/projects";
@@ -13,24 +12,17 @@ export default function ProjectPage({ project }) {
     <article className="project-page">
       <header className="project-page-header">
         <a className="case-link" href="#/work">← Back to Work</a>
-        <div className="project-modal-count">
-          {String(index + 1).padStart(2, "0")} / {String(PROJECT_ORDER.length).padStart(2, "0")}
-        </div>
         <h1 className="project-modal-title">{project.title}</h1>
         <p className="project-modal-eyebrow">
           {project.eyebrow}
         </p>
-        <p className="project-modal-question hand">
-          {project.id === "honor" ? "When does motion actually help?" : project.question}
+        <p className="project-page-summary">
+          {project.summary}
         </p>
       </header>
-      <div className="project-page-art project-modal-art">
-        {project.thumbnail ? (
+      {project.thumbnail && <div className="project-page-art project-modal-art">
           <img src={assetUrl(project.thumbnail)} alt="" />
-        ) : (
-          <ProjectArt type={project.art} />
-        )}
-      </div>
+      </div>}
       <div className="project-modal-tags tag-row">
         {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
       </div>

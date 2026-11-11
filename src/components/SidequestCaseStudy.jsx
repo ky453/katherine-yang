@@ -1,276 +1,58 @@
-function SidequestAsset({ label, path, className = "" }) {
+export default function SidequestCaseStudy() {
   return (
-    <figure className={`sidequest-asset ${className}`}>
-      <div className="sidequest-asset-frame" aria-hidden="true">
-        <span className="sidequest-asset-label hand">{label}</span>
-        <span className="sidequest-asset-grid" />
-      </div>
-      <figcaption>
-        <span>future material</span>
-        <code>{path}</code>
-      </figcaption>
-    </figure>
-  );
-}
-
-function SidequestCaseStudy() {
-  return (
-    <div className="sidequest-case-study">
-      <section className="sidequest-opening">
-        <div className="sidequest-opening-heading">
-          <span className="sidequest-section-number">01 / 12</span>
-          <span className="sidequest-role">A personal project taking shape</span>
-          <h2>Find something to do that fits your budget, then keep the memory.</h2>
-        </div>
-        <div className="sidequest-opening-copy">
-          <p>
-            Sidequest started from a simple frustration: there are endless apps for
-            finding restaurants, events, stores, and things to do, but discovery often
-            happens in separate places.
-          </p>
-          <p>
-            One app helps me find an event. Another saves restaurants. Another tracks
-            spending. Photos and memories live somewhere else. The experience felt
-            fragmented.
-          </p>
-          <p className="sidequest-hand-note hand">What if finding something to do also helped me remember it?</p>
-        </div>
+    <div className="case-study">
+      <section className="project-modal-section">
+        <h2>Problem</h2>
+        <p>Activity discovery, restaurant lists, spending, and personal memories often live in separate apps. Recommendations may match someone’s interests while missing their budget, available time, location, or mood.</p>
+        <p>Sidequest explores activity discovery that accounts for those constraints from the start, with a lightweight way to save what happened afterward.</p>
       </section>
-
-      <section className="sidequest-problem sidequest-band">
-        <div className="sidequest-section-label">
-          <span className="sidequest-section-number">02</span>
-          <span className="hand">the problem</span>
-        </div>
-        <div>
-          <h2>Recommendations ignore context.</h2>
-          <p>
-            People do not only ask, "What am I interested in?" They are also asking
-            what fits their life right now.
-          </p>
-          <div className="sidequest-context-list">
-            <span>too expensive</span>
-            <span>too far away</span>
-            <span>not enough time</span>
-            <span>wrong mood</span>
-            <span>already done something similar</span>
-            <span>needs to be spontaneous</span>
-          </div>
-          <p className="sidequest-pullquote">
-            A recommendation can match my interests and still be completely useless.
-          </p>
-        </div>
+      <section className="project-modal-section">
+        <h2>Product priorities</h2>
+        <p>I defined a hierarchy: discover an activity, make it fit the user’s current situation, and keep a memory afterward. This helped separate the core experience from a broader social app, journal, or spending tracker.</p>
+        <ol>
+          <li>Activity discovery</li>
+          <li>Contextual recommendation inputs</li>
+          <li>Budget-aware suggestions</li>
+          <li>Save an activity for later</li>
+          <li>Lightweight post-activity memory</li>
+        </ol>
+        <p>Ratings, richer financial tracking, social features, community events, deeper personalization, and recommendation history were considered for later iterations.</p>
       </section>
-
-      <section className="sidequest-principle">
-        <span className="sidequest-section-number">03</span>
-        <span className="hand">product principle</span>
-        <h2>Discovery should understand constraints, not just preferences.</h2>
-        <p>
-          Budget should not be a filter hidden at the end of the experience. It should
-          be part of the recommendation logic from the beginning.
-        </p>
-        <div className="sidequest-budget-mark">
-          <span className="hand">tonight's constraint</span>
-          <strong>$35</strong>
-          <small>not a footnote</small>
-        </div>
+      <section className="project-modal-section">
+        <h2>User journey</h2>
+        <ol>
+          <li>Decide to find an activity.</li>
+          <li>Provide the relevant budget, time, mood, and location constraints.</li>
+          <li>Review suggestions that fit the current situation.</li>
+          <li>Choose or save an activity.</li>
+          <li>Optionally keep a memory afterward.</li>
+        </ol>
       </section>
-
-      <section className="sidequest-questions">
-        <div className="sidequest-section-label">
-          <span className="sidequest-section-number">04</span>
-          <span className="hand">working notes</span>
-        </div>
-        <div>
-          <h2>The product kept getting clearer through questions.</h2>
-          <div className="sidequest-question-wall">
-            <p>What information should Sidequest ask for before recommending something?</p>
-            <p>How much friction is acceptable before discovery starts?</p>
-            <p>Should budget be a hard constraint or a preference?</p>
-            <p>What happens if the best recommendation is slightly over budget?</p>
-            <p>How personal can recommendations feel without a huge onboarding flow?</p>
-            <p>When does an activity become a memory?</p>
-            <p>Should journaling be automatic, prompted, or optional?</p>
-            <p>How much financial tracking belongs in an activity app?</p>
-          </div>
-        </div>
+      <section className="project-modal-section">
+        <h2>Design process</h2>
+        <p>Sketches helped organize the information; mid-fidelity prototypes explored the flow; a UI system established consistent components; and high-fidelity studies explored the visual direction.</p>
+        <p>I moved from an early black-and-white direction toward a more expressive identity suited to an activity-discovery product. Reusable React components and implementation patterns remain planned.</p>
       </section>
-
-      <section className="sidequest-hierarchy sidequest-band-lavender">
-        <div className="sidequest-section-label">
-          <span className="sidequest-section-number">05</span>
-          <span className="hand">defining Sidequest</span>
-        </div>
-        <div>
-          <h2>I had to decide what the product actually was.</h2>
-          <p>
-            It could have become an event discovery app, social planning app, local
-            recommendation app, personal journal, or spending tracker. Instead of
-            making each direction equally important, I started defining a hierarchy.
-          </p>
-          <div className="sidequest-hierarchy-list">
-            <div><span>CORE</span><strong>Discover something worth doing.</strong></div>
-            <div><span>CONTEXT</span><strong>Make it fit the user's situation, including budget.</strong></div>
-            <div><span>CONTINUITY</span><strong>Keep a memory of what actually happened.</strong></div>
-          </div>
-          <p className="sidequest-caveat hand">A working hierarchy, not a claim that the idea is finished.</p>
-        </div>
+      <section className="project-modal-section">
+        <h2>Decisions and tradeoffs</h2>
+        <ul>
+          <li><strong>Personalization and friction:</strong> More inputs can improve suggestions, but a long onboarding flow delays value.</li>
+          <li><strong>Budget accuracy and flexibility:</strong> A strict limit may hide worthwhile options; too much flexibility makes the constraint ineffective.</li>
+          <li><strong>Discovery and scope:</strong> Journaling, social planning, and spending tools each pull the product toward a different purpose.</li>
+          <li><strong>Structure and spontaneity:</strong> Planning should help people choose an activity without adding unnecessary steps.</li>
+        </ul>
+        <p>Open questions include which inputs are essential, whether budget is a hard constraint, how to handle over-budget recommendations, and whether memory-keeping should be automatic, prompted, or optional.</p>
       </section>
-
-      <section className="sidequest-mvp">
-        <div className="sidequest-section-label">
-          <span className="sidequest-section-number">06</span>
-          <span className="hand">product prioritization</span>
-        </div>
-        <div>
-          <h2>More ideas than belonged in an MVP.</h2>
-          <p>
-            The useful constraint was deciding which features strengthened the core user
-            problem and which ones created product sprawl.
-          </p>
-          <ol className="sidequest-mvp-list">
-            <li><span>01</span><strong>Activity discovery</strong></li>
-            <li><span>02</span><strong>Contextual recommendation inputs</strong></li>
-            <li><span>03</span><strong>Budget-aware recommendations</strong></li>
-            <li><span>04</span><strong>Save an activity for later</strong></li>
-            <li><span>05</span><strong>Lightweight post-activity memory</strong></li>
-          </ol>
-          <div className="sidequest-later">
-            <span className="hand">ideas for later</span>
-            <p>ratings · richer financial tracking · social features · community events · deeper personalization · recommendation history</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="sidequest-flow">
-        <div className="sidequest-flow-heading">
-          <span className="sidequest-section-number">07</span>
-          <div>
-            <span className="hand">user journey</span>
-            <h2>From "I want to do something" to remembering it.</h2>
-          </div>
-        </div>
-        <div className="sidequest-flow-map">
-          <span>I want to do something</span><i>↓</i>
-          <span>Tell Sidequest what matters right now</span><i>↓</i>
-          <span>What fits my mood and the time and money I have?</span><i>↓</i>
-          <span>Get relevant activity suggestions</span><i>↓</i>
-          <span>Choose an activity, then keep the memory</span>
-        </div>
-        <SidequestAsset label="user flow" path="/assets/sidequest/user-flow.png" className="sidequest-asset-wide" />
-      </section>
-
-      <section className="sidequest-process sidequest-band">
-        <div className="sidequest-section-label">
-          <span className="sidequest-section-number">08</span>
-          <span className="hand">designing the product</span>
-        </div>
-        <div>
-          <h2>Each stage answered a different product question.</h2>
-          <div className="sidequest-process-list">
-            <div><strong>Sketches</strong><span>What information belongs in the experience?</span><em>designed</em></div>
-            <div><strong>Mid-fi</strong><span>Does the flow make sense before visual polish?</span><em>prototyped</em></div>
-            <div><strong>UI system</strong><span>What needs to stay consistent as the product grows?</span><em>designed</em></div>
-            <div><strong>High-fi</strong><span>What should Sidequest actually feel like?</span><em>prototyped</em></div>
-            <div><strong>Build</strong><span>Which interactions reveal whether the concept works outside Figma?</span><em>planned</em></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="sidequest-assets-grid">
-        <SidequestAsset label="sketches" path="/assets/sidequest/sketches.jpg" />
-        <SidequestAsset label="mid-fi flow" path="/assets/sidequest/midfi-flow.png" />
-        <SidequestAsset label="high-fi discover" path="/assets/sidequest/hifi-discover.png" />
-        <SidequestAsset label="high-fi budget" path="/assets/sidequest/hifi-budget.png" />
-      </section>
-
-      <section className="sidequest-change sidequest-band-lavender">
-        <div className="sidequest-section-label">
-          <span className="sidequest-section-number">09</span>
-          <span className="hand">what changed</span>
-        </div>
-        <div>
-          <h2>A polished interface can still feel anonymous.</h2>
-          <p>
-            The early visual direction felt too generic and too black-and-white. It did
-            not have enough personality for a product about choosing how to spend your
-            time. I iterated toward something younger, more contemporary, more
-            expressive, and still usable.
-          </p>
-          <p>
-            That shift taught me that visual polish is not the same thing as a coherent
-            product identity.
-          </p>
-          <SidequestAsset label="visual direction studies" path="/assets/sidequest/visual-direction.jpg" className="sidequest-asset-wide" />
-        </div>
-      </section>
-
-      <section className="sidequest-tradeoffs">
-        <div className="sidequest-section-label">
-          <span className="sidequest-section-number">10</span>
-          <span className="hand">product tensions</span>
-        </div>
-        <div>
-          <h2>Useful tensions, not solved slogans.</h2>
-          <div className="sidequest-tradeoff-grid">
-            <div><h3>Personalization <i>vs</i> friction</h3><p>More inputs can improve recommendations, but asking too much before showing value makes discovery feel like a form.</p></div>
-            <div><h3>Budget accuracy <i>vs</i> flexibility</h3><p>A strict budget filter can hide worthwhile options; too much flexibility makes the constraint meaningless.</p></div>
-            <div><h3>Discovery <i>vs</i> product sprawl</h3><p>Journaling, ratings, social planning, and expense tracking are interesting, but each pulls Sidequest toward a different category.</p></div>
-            <div><h3>Structure <i>vs</i> spontaneity</h3><p>Planning should get easier without turning "what should we do tonight?" into another task-management workflow.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="sidequest-build sidequest-band">
-        <div className="sidequest-section-label">
-          <span className="sidequest-section-number">11</span>
-          <span className="hand">building beyond Figma</span>
-        </div>
-        <div>
-          <h2>Make it buildable, not just presentable.</h2>
-          <p>
-            I started planning how Sidequest's interactions could become reusable React
-            components. A consistent component system should make the product easier
-            to extend when it is ready to build.
-          </p>
-          <div className="sidequest-status-row">
-            <span><b>designed</b> product direction, UI system</span>
-            <span><b>prototyped</b> key interaction ideas</span>
-            <span><b>planned</b> reusable implementation patterns</span>
-            <span><b>implemented</b> this case-study surface</span>
-          </div>
-          <SidequestAsset label="Reusable interface pieces" path="/assets/sidequest/ui-kit.png" className="sidequest-asset-wide" />
-          <SidequestAsset label="How recommendations could fit together" path="/assets/sidequest/component-library.png" className="sidequest-asset-wide" />
-        </div>
-      </section>
-
-      <section className="sidequest-outcome">
-        <span className="sidequest-section-number">12</span>
-        <span className="hand">what still needs testing</span>
-        <h2>The concept is clearer. It still needs validation.</h2>
-        <p>
-          The outcome is a clearer product concept, a more coherent feature hierarchy,
-          a design system, and a path from sketches toward higher-fidelity and
-          interactive implementation. The idea still needs validation, and that is part
-          of its current state.
-        </p>
-        <blockquote>
-          Sidequest taught me that 0→1 product work is mostly deciding what not to build.
-        </blockquote>
-        <p>
-          It was easy to imagine more features: social planning, reviews, spending
-          insights, journaling, community events. The harder question was whether each
-          feature strengthened the same user promise.
-        </p>
-        <p>
-          I started thinking less about "what else could this app do?" and more about
-          "what does this product need to be unusually good at?" That shift made the
-          project much clearer.
-        </p>
+      <section className="project-modal-section">
+        <h2>Status and next steps</h2>
+        <ul>
+          <li><strong>Designed:</strong> Product direction and a UI system.</li>
+          <li><strong>Prototyped:</strong> Key interaction ideas.</li>
+          <li><strong>Planned:</strong> Reusable implementation patterns.</li>
+          <li><strong>Implemented:</strong> This portfolio case-study surface.</li>
+        </ul>
+        <p>The concept still needs user validation. It is not presented as a launched recommendation engine or a product with measured adoption.</p>
       </section>
     </div>
   );
 }
-
-export default SidequestCaseStudy;

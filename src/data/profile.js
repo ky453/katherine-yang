@@ -3,7 +3,7 @@ export const CURRENTLY_ITEMS = [
   { label: "making", text: "Sidequest and this website" },
   {
     label: "thinking about",
-    text: "why some tiny interactions make products feel dramatically better",
+    text: "interaction design and product usability",
   },
   { label: "saving", text: "menus, packaging, interesting interfaces, typography, signs" },
 ];
@@ -17,7 +17,7 @@ export const PLAYGROUND_PHOTOS = [
     year: "",
     note: "",
     path: "/assets/photos/travel/spain-barcelona.jpg",
-    caption: "A day among the mosaics in Barcelona.",
+    caption: "Barcelona, Spain",
     alt: "Katherine in front of colorful mosaic architecture in Barcelona",
     layout: "wide",
   },
@@ -28,7 +28,7 @@ export const PLAYGROUND_PHOTOS = [
     year: "",
     note: "",
     path: "/assets/photos/food/mapo-tofu.jpg",
-    caption: "Dinner, with flowers on the table.",
+    caption: "Homemade mapo tofu",
     alt: "Homemade mapo tofu and side dishes on a table with pink flowers",
     layout: "food",
   },
@@ -39,7 +39,7 @@ export const PLAYGROUND_PHOTOS = [
     year: "",
     note: "",
     path: "/assets/photos/travel/spain-tibidabo.jpg",
-    caption: "At a lookout, with mountains all around.",
+    caption: "Tibidabo, Barcelona",
     alt: "Katherine in a red dress beside a carved stone figure above a green valley",
     layout: "portrait",
   },
@@ -50,7 +50,7 @@ export const PLAYGROUND_PHOTOS = [
     year: "",
     note: "",
     path: "/assets/photos/mcsa/mcsa-shanghai-sendoff.jpg",
-    caption: "A little Cornell in Shanghai.",
+    caption: "Cornell student gathering, Shanghai",
     alt: "Katherine with fellow Cornell students at a Shanghai send-off gathering",
     layout: "group",
   },
@@ -61,7 +61,7 @@ export const PLAYGROUND_PHOTOS = [
     year: "",
     note: "",
     path: "/assets/photos/food/peach-burrata-salad.jpg",
-    caption: "Peaches, burrata, and a very good plate.",
+    caption: "Peach and burrata salad",
     alt: "Peach and burrata salad with greens on a dark serving plate",
     layout: "food-wide",
   },
@@ -72,7 +72,7 @@ export const PLAYGROUND_PHOTOS = [
     year: "",
     note: "",
     path: "/assets/photos/travel/japan-1.jpg",
-    caption: "A quiet moment in Japan.",
+    caption: "Japan",
     alt: "Katherine in a patterned blue kimono outside a traditional wooden building",
     layout: "portrait-small",
   },
@@ -83,7 +83,7 @@ export const PLAYGROUND_PHOTOS = [
     year: "",
     note: "",
     path: "/assets/photos/travel/yunnan-2.jpg",
-    caption: "A moment in Yunnan.",
+    caption: "Yunnan, China",
     alt: "Katherine in a fur hat with mountain peaks and tiled rooftops behind her in Yunnan",
     layout: "wide",
   },
@@ -142,4 +142,4 @@ export const SKILLS = [
   },
 ];
 
-export const ABOUT_INTRO = "I'm interested in what people expect from a product and how the system responds. Studying Information Science alongside History of Art makes me look at both how things work and what their choices communicate. I'm drawn to projects where the problem is still fuzzy and the team needs to figure out what matters before deciding what to build.";
+export const ABOUT_INTRO = "My work combines user research, product requirements, interaction design, and hands-on development. I've worked on cloud PC workflows at CloudSky, cross-device onboarding at HONOR, and AI and full-stack prototypes. Studying Information Science and Art History helps me consider both system behavior and how people interpret an interface.";

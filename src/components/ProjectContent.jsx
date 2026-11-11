@@ -12,10 +12,10 @@ export default function ProjectContent({ project }) {
   const CaseStudy = CASE_STUDIES[project.id];
   if (CaseStudy) return <CaseStudy />;
 
-  return project.sections.map((section) => (
+  return project.sections.filter((section) => !section.placeholder).map((section) => (
     <section className="project-modal-section" key={section.heading}>
       <h2>{section.heading}</h2>
-      <p className={section.placeholder ? "project-modal-placeholder" : undefined}>{section.body}</p>
+      <p>{section.body}</p>
     </section>
   ));
 }

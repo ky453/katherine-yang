@@ -8,20 +8,6 @@
   border-bottom: 1px solid var(--line);
 }
 
-.home-landing::before,
-.home-landing::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-  width: 60%;
-  height: 340px;
-  filter: blur(72px);
-  opacity: 0.1;
-}
-.home-landing::before { left: 0; top: 22%; background: var(--mint); }
-.home-landing::after { right: 0; top: 8%; background: var(--lavender); }
-
 .home-landing-stage {
   position: relative;
   height: 580px;
@@ -45,18 +31,6 @@
   letter-spacing: 0;
 }
 .home-landing h1 span { position: relative; isolation: isolate; display: table; }
-.home-landing h1 span::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 10% -12px 2%;
-  background: color-mix(in srgb, var(--mint) 48%, var(--paper));
-  border-radius: 42% 38% 36% 30% / 43% 35% 45% 36%;
-}
-.home-landing h1 span:last-child::before {
-  background: color-mix(in srgb, var(--lavender) 60%, var(--paper));
-  inset: 8% -14px 0;
-}
 .home-landing-statement {
   max-width: 330px;
   margin: 24px 0 0 8px;
@@ -100,29 +74,13 @@
   margin: 0;
   isolation: isolate;
 }
-.home-landing-portrait::before,
-.home-landing-portrait::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-  border-radius: 48% 52% 50% 50% / 49% 52% 48% 51%;
-}
-.home-landing-portrait::before {
-  inset: -10px 8px 0 -15px;
-  background: color-mix(in srgb, var(--mint) 64%, var(--paper));
-}
-.home-landing-portrait::after {
-  inset: 0 -14px -10px 8px;
-  background: color-mix(in srgb, var(--lavender) 64%, var(--paper));
-}
 .home-landing-portrait img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 43%;
-  border-radius: 49% 51% 48% 52% / 51% 49% 51% 49%;
+  border-radius: 50%;
   outline: 3px solid var(--cream);
 }
 

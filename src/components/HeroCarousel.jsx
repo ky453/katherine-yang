@@ -3,10 +3,10 @@ import { assetUrl } from "../lib/assets";
 import { arcKeyframes, arcSlots, CAROUSEL_STEP_MS } from "../lib/heroCarousel";
 
 const PAGES = [
-  { id: "work", title: "Work", caption: "Selected work", href: "#/work", motif: "folder" },
-  { id: "about", title: "About", caption: "My story", href: "#/about", motif: "person" },
-  { id: "playground", title: "Playground", caption: "Things I notice", href: "#/playground", motif: "spark" },
-  { id: "resume", title: "Résumé", caption: "Experience", href: assetUrl("assets/Katherine_Yang_PM_Resume.pdf"), motif: "document", external: true },
+  { id: "work", title: "Work", href: "#/work", motif: "folder" },
+  { id: "about", title: "About", href: "#/about", motif: "person" },
+  { id: "playground", title: "Playground", href: "#/playground", motif: "spark" },
+  { id: "resume", title: "Résumé", href: assetUrl("assets/Katherine_Yang_PM_Resume.pdf"), motif: "document", external: true },
 ];
 const SLOTS = arcSlots(PAGES.length);
 
@@ -56,7 +56,6 @@ export default function HeroCarousel({ paused, staticLayout }) {
             aria-label={page.external ? "Résumé (opens in a new tab)" : page.title}>
             <span className={`hero-motif hero-motif--${page.motif}`} aria-hidden="true" />
             <span className="hero-carousel-title">{page.title}</span>
-            <span className="hero-carousel-caption">{page.caption}</span>
           </a>
         </div>
       ))}

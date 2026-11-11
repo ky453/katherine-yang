@@ -27,7 +27,7 @@ export default function Playground() {
       <header className="playground-board-heading">
         <div>
           <h1>Playground</h1>
-          <p>things I noticed and wanted to keep</p>
+          <p>Photography and interaction experiments</p>
         </div>
         <div className="playground-board-actions">
           <button type="button" className="playground-surprise" onClick={surpriseMe} aria-haspopup="dialog">
@@ -51,11 +51,9 @@ export default function Playground() {
               photo={photo}
               onOpen={openPhoto}
               position={BOARD_LAYOUTS[layout][index]}
-              index={index}
               showNote={notedIds.includes(photo.id)}
             />
           ))}
-          <aside className="board-collecting-note hand">still collecting little things ↗</aside>
           <BoardExperiment />
           <span className="playground-sr-only" role="status">Board arrangement {layout + 1} of {BOARD_LAYOUTS.length}</span>
       </section>

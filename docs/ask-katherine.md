@@ -2,6 +2,7 @@
 
 The portfolio includes an English question-and-answer panel on every page. Home
 embeds the chat directly below the hero, with a hero button that scrolls to it.
+The homepage section contains the chat controls without a separate promotional introduction.
 Other pages keep the floating launcher. Both views share an in-memory conversation
 so visitors can follow a source into a project and continue asking questions.
 Answers render short paragraphs, headings, lists, and bold labels. Its

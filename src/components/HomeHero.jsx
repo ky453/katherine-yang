@@ -40,9 +40,7 @@ export default function HomeHero() {
         <div className="home-landing-intro">
           <h1 id="home-hero-title"><span>Katherine</span>{" "}<span>Yang</span></h1>
           <p className="home-landing-statement">
-            I make things to understand how they work. I&apos;m curious about
-            what people expect from a product, and the small details that help
-            them find their way.
+            Product requirements, user research, and AI prototypes.
           </p>
           <p className="home-landing-studies">
             Information Science + History of Art at Cornell
@@ -53,7 +51,7 @@ export default function HomeHero() {
               section?.scrollIntoView({ behavior: reducedMotion ? "instant" : "smooth", block: "start" });
               section?.querySelector("textarea")?.focus({ preventScroll: true });
             }}>
-            <span aria-hidden="true">✳</span> Ask my AI guide <span aria-hidden="true">↗</span>
+            Ask my AI assistant
           </button>
         </div>
 

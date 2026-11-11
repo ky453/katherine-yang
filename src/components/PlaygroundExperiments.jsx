@@ -45,7 +45,7 @@ export function PlaygroundMotion() {
       <span className="playground-settle-track" aria-hidden="true">
         <span key={run} className={`playground-settle-dot${run ? " playground-settle-dot--playing" : ""}`} />
       </span>
-      <span className="motion-demo-label hand">try a small settle</span>
+      <span className="motion-demo-label">Replay motion</span>
     </button>
   );
 }

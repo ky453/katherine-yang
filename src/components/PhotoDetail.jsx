@@ -68,7 +68,7 @@ export default function PhotoDetail({ photos, index, onNavigate, onClose, restor
       onKeyDown={handleKeyDown}
     >
       <div className="photo-detail-toolbar">
-        <span>Things I noticed</span>
+        <span>Photography</span>
         <button type="button" className="photo-detail-close" onClick={onClose} aria-label="Close photo" title="Close photo (Escape)">
           Close <span aria-hidden="true">×</span>
         </button>
@@ -78,7 +78,7 @@ export default function PhotoDetail({ photos, index, onNavigate, onClose, restor
           <div className="photo-detail-image-frame">
             <img key={photo.id} src={assetUrl(photo.path)} alt={photo.alt} />
           </div>
-          <figcaption className="hand" id="photo-detail-caption">{photo.caption}</figcaption>
+          <figcaption id="photo-detail-caption">{photo.caption}</figcaption>
         </figure>
         <div className="photo-detail-context">
           <p className="photo-detail-position" aria-live="polite" aria-atomic="true">

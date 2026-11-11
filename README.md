@@ -69,7 +69,7 @@ with source links and explicit boundaries on outcomes and growth attribution.
    `body`. Optional `placeholder: true` marks draft content.
 3. Set `thumbnail` to a path in `public/`, for example
    `"/assets/photos/duolingo-project/hi-fi.png"`. Existing Duolingo images are
-   already in that folder. Alternatively, add an `art` scene to `ProjectArt.jsx`.
+   already in that folder. Projects without a thumbnail use a text card.
 4. For a custom case-study layout, create `src/components/DuolingoCaseStudy.jsx`
    and register it in `CASE_STUDIES` in `src/components/ProjectContent.jsx`.
    Otherwise the reusable section renderer displays `sections` automatically.
